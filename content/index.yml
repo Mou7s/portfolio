@@ -1,83 +1,85 @@
 seo:
-  title: "Emma Thompson - UX/UI Designer"
-  description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
-title: "Hey, I'm Emma Thompson UX/UI Designer"
-description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
+  title: "Liu Chuge - Full-stack Engineer"
+  description: "Welcome to my portfolio! I'm Liu Chuge, a full-stack engineer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
+title: "Hey, I'm Liu Chuge - Full-stack Engineer"
+description: "I craft intuitive digital experiences where design and functionality seamlessly converge. Grounded on the front lines of the company, I bridge IT and networking with front- and back-end development, bringing ideas to life through code and creativity."
 hero:
   links:
-    - label: "Use this template"
+    - label: "Contact Me"
       to: https://github.com/nuxt-ui-templates/portfolio
       color: "neutral"
   images:
-    - src: /hero/random-1.avif
+    - src: /pics/1.avif
       alt: Random Image 1
-    - src: /hero/random-2.avif
+    - src: /pics/2.avif
       alt: Random Image 2
-    - src: /hero/random-3.avif
+    - src: /pics/3.avif
       alt: Random Image 3
-    - src: /hero/random-4.avif
+    - src: /pics/4.avif
       alt: Random Image 4
-    - src: /hero/random-5.avif
+    - src: /pics/5.avif
       alt: Random Image 5
-    - src: /hero/random-6.avif
+    - src: /pics/6.avif
       alt: Random Image 6
-    - src: /hero/random-7.avif
+    - src: /pics/7.avif
       alt: Random Image 7
-    - src: /hero/random-8.avif
+    - src: /pics/8.avif
       alt: Random Image 8
-    - src: /hero/random-9.avif
+    - src: /pics/9.avif
       alt: Random Image 9
+
 about:
   title: "About Me"
   description: |
-    As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
-    My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
+    As a full-stack engineer with 2 years of experience, I manage end-to-end website development and deployment, supporting projects from concept to launch. 
+    I also handle graphic design and video editing to enhance brand and content presentation, while taking care of network operations to ensure system stability and smooth website performance. 
+    With a balanced approach to both technical implementation and visual communication, I turn requirements into reliable, user-friendly digital products with a consistent experience.
 experience:
   title: Work Experience
   items:
-    - position: "Brand Designer at"
-      date: "2023 - Present"
+    - position: "Full-stack Engineer at"
+      date: "2025 - Present"
       company:
-        name: Nuxt
-        logo: "i-simple-icons-nuxtdotjs"
-        url: "https://nuxt.com"
-        color: "#00DC82"
-    - position: "Assets Designer at"
-      date: "2022 - 2023"
+        name: Shanze
+        logo: "mdi:battery-charging"
+        url: "https://shanzesz.com"
+        color: "#029bed"
+    - position: "IT & Designer at"
+      date: "2024 - 2025"
       company:
-        name: Raycast
-        logo: "i-simple-icons-raycast"
-        url: "https://raycast.com"
-        color: "#FF6363"
-    - position: "Senior UX/UI Designer at"
-      date: "2020 - 2021"
+        name: Xinpu
+        logo: "mdi:paper-roll"
+        url: "https://baike.baidu.com/item/%E4%B8%9C%E8%8E%9E%E5%B8%82%E6%96%B0%E5%9F%94%E7%BA%B8%E4%B8%9A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/51511095"
+        color: "#28c95e"
+    - position: "Network Administrator at"
+      date: "2023 - 2024"
       company:
-        name: Linear
-        logo: "i-simple-icons-linear"
-        url: "https://linear.app"
-        color: "#5E6AD2"
+        name: Ford
+        logo: "mdi:car"
+        url: "https://www.ford.com.cn"
+        color: "#081534"
 testimonials:
   - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
     author:
-      name: 'Sarah Chen'
-      description: 'Product Director at Bloom Finance'
+      name: "Sarah Chen"
+      description: "Product Director at Bloom Finance"
       avatar:
-        src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+        src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
+        srcset: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
   - quote: "Working with Emma was the best decision we made for our startup. She didn't just deliver designs—she challenged our assumptions, conducted thorough user research, and created an experience that truly resonated with our audience. Her technical knowledge of front-end development meant the handoff to our engineering team was seamless."
     author:
-      name: 'Michael Rodriguez'
-      description: 'Co-founder of Wavelength Music'
+      name: "Michael Rodriguez"
+      description: "Co-founder of Wavelength Music"
       avatar:
-        src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+        src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
+        srcset: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
   - quote: "Emma stands out in her ability to translate complex sustainability data into intuitive interfaces. Her work on EcoTrack wasn't just visually stunning—it fundamentally changed how our users interact with environmental information. She approaches each problem with both creativity and analytical rigor, which is exactly what we needed."
     author:
-      name: 'Dr. Aisha Johnson'
-      description: 'Chief Innovation Officer at GreenTech Solutions'
+      name: "Dr. Aisha Johnson"
+      description: "Chief Innovation Officer at GreenTech Solutions"
       avatar:
-        src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+        src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
+        srcset: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
 blog:
   title: "Latest Articles"
   description: "Some of my recent thoughts"
