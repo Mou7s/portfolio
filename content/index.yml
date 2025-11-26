@@ -57,7 +57,7 @@ experience:
         name: Ford
         logo: "mdi:car"
         url: "https://www.ford.com.cn"
-        color: "#081534"
+        color: "#47a8e5"
 testimonials:
   - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
     author:
