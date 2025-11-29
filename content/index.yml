@@ -6,7 +6,7 @@ description: "I craft intuitive digital experiences where design and functionali
 hero:
   links:
     - label: "Contact Me"
-      to: https://github.com/nuxt-ui-templates/portfolio
+      to: https://github.com/mou7s
       color: "neutral"
   images:
     - src: /pics/1.avif

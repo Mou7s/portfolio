@@ -5,7 +5,7 @@ export default defineAppConfig({
       light: "https://pic1.imgdb.cn/item/6926ac683203f7be0033f8c3.png",
       alt: "My profile picture",
     },
-    meetingLink: "https://cal.com/",
+    meetingLink: "https://cal.com/mou7s/30min/",
     email: "mou7s@icloud.com",
     available: true,
   },
