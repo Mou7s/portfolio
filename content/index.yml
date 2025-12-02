@@ -93,12 +93,6 @@ faq:
         - label: What services do you offer?
           content: |
             I design and build end-to-end web experiences. That means UX research, visual systems, Nuxt/Vue front-end engineering, API development, and deployment to cloud or on-prem infrastructure. Because of my IT and networking background, I can also take care of hosting setups, observability, and light DevOps so your product is stable after launch.
-        - label: What is your design process like?
-          content: |
-            I kick things off with discovery sessions to map user goals and technical constraints, then move into low/high-fidelity prototypes before coding. Development happens in tight feedback loops with QA checklists, performance passes, and handover documentation so teams always know the state of the build.
-        - label: Do you work with startups?
-          content: |
-            Absolutely—I thrive in early-stage environments where roles are fluid. I can help founders translate vague ideas into scoped roadmaps, stand up MVPs quickly, and harden the stack as traction grows, all while staying mindful of budget and time.
     - title: Pricing & Timelines
       questions:
         - label: How much does a project typically cost?
