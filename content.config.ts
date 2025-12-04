@@ -105,6 +105,29 @@ export default defineContentConfig({
         links: z.array(createButtonSchema())
       })
     }),
+    experience: defineCollection({
+      type: 'page',
+      source: 'experience.yml',
+      schema: createBaseSchema().extend({
+        seo: z.object({
+          title: z.string(),
+          description: z.string()
+        }).optional(),
+        links: z.array(createButtonSchema()).optional(),
+        experiences: z.array(z.object({
+          company: z.string(),
+          role: z.string(),
+          period: z.string(),
+          location: z.string(),
+          summary: z.string(),
+          highlights: z.array(z.object({
+            title: z.string(),
+            detail: z.string()
+          })),
+          stack: z.array(z.string())
+        }))
+      })
+    }),
     speaking: defineCollection({
       type: 'page',
       source: 'speaking.yml',
