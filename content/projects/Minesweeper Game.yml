@@ -1,0 +1,14 @@
+title: Minesweeper Game (Nuxt)
+description: Developed a fully functional Minesweeper game with Nuxt, implementing core gameplay logic, grid generation, and win/lose conditions. Added Dark Mode for better visual comfort and deployed the project on Netlify for public access and easy sharing.
+image: /pics/minesweeper.avif
+url: "https://nuxtminesweeper.netlify.app"
+tags:
+  [
+    "Nuxt",
+    "JavaScript",
+    "Game Development",
+    "Minesweeper",
+    "Dark Mode",
+    "Netlify",
+  ]
+date: "2025"
