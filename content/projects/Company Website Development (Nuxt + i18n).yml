@@ -1,0 +1,16 @@
+title: Company Website Development (Nuxt + i18n)
+description: Built and launched the company’s official website using Nuxt, delivering a responsive, mobile-first experience with performance optimizations. Implemented multilingual support (i18n) with Nuxt UI, structured and published company and product information, and set up reliable production operations by managing Node processes via PM2 and enabling HTTPS with Caddy SSL. Drove SEO improvements using Google Search Console and Chrome Lighthouse, achieving top-ranked positions for target keywords.
+image: /pics/shanzesz.avif
+url: "#"
+tags:
+  [
+    "Nuxt",
+    "Nuxt UI",
+    "i18n",
+    "Web Development",
+    "PM2",
+    "Caddy",
+    "Performance Optimization",
+    "Responsive Design",
+  ]
+date: "2025"
