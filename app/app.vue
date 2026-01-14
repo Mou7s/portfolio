@@ -22,7 +22,7 @@ useHead({
 
 // 配置 SEO 与社交分享卡片
 useSeoMeta({
-  titleTemplate: "%s - Nuxt Portfolio Template",
+  titleTemplate: "%s",
   ogImage: "https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png",
   twitterImage: "https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png",
   twitterCard: "summary_large_image",

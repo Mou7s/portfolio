@@ -37,8 +37,15 @@ about:
 experience:
   title: Work Experience
   items:
+    - position: "IT Engineer at"
+      date: "2026 - Present"
+      company:
+        name: CTK-ELEC
+        logo: "mdi:factory"
+        url: "https://www.ctk-elec.com/"
+        color: "#0066b3"  
     - position: "Full-stack Engineer at"
-      date: "2025 - Present"
+      date: "2025 - 2026"
       company:
         name: Shanze
         logo: "mdi:battery-charging"
@@ -58,6 +65,7 @@ experience:
         logo: "mdi:car"
         url: "https://www.ford.com.cn"
         color: "#47a8e5"
+
 # testimonials:
 #   - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
 #     author:

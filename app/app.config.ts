@@ -7,7 +7,7 @@ export default defineAppConfig({
     },
     meetingLink: "https://cal.com/mou7s/30min/",
     email: "mou7s@icloud.com",
-    available: true,
+    available: false,
   },
   ui: {
     colors: {

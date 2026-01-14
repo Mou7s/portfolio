@@ -111,7 +111,7 @@ defineProps<{
             :label="
               global.available
                 ? 'Open to opportunities'
-                : 'Not available at the moment'
+                : 'Not actively looking'
             "
           >
             <template #leading>
