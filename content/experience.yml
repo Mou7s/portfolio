@@ -6,10 +6,26 @@ description: "Selected roles with measurable outcomes across full-stack delivery
 links:
   - label: "Contact Me"
 experiences:
+  - company: "Dongguan Tongke Semiconductor Co., Ltd."
+    role: "IT Engineer"
+    period: "2026.01 - Present"
+    location: "Dongguan"
+    summary: "Lead IT operations for a 200-person semiconductor company, covering network architecture, ERP support, and digital transformation initiatives to improve efficiency and security."
+    highlights:
+      - title: "ERP development"
+        detail: "Built and maintained ERP modules for inventory, production, and sales, improving data accuracy and reducing handling time."
+      - title: "Full stack project deployment"
+        detail: "Led the development and deployment of internal tools and dashboards to support operations and decision-making across departments."
+    stack:
+      - "Network Architecture"
+      - "ERP Development"
+      - "IT Operations"
+      - "Spring Boot"
+      - "Web Development"
   - company: "Dongguan Shanze New Energy Technology Co., Ltd."
     role: "Full-stack Engineer"
-    period: "2025.07 - Present"
-    location: "Dongguan · Remote"
+    period: "2025.07 - 2026.01"
+    location: "Dongguan"
     summary: "Own the corporate website and admin backend end-to-end while also handling design, video editing, and network/ERP operations to keep brand and internal workflows running smoothly."
     highlights:
       - title: "Full-stack delivery"
