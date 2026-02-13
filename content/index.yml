@@ -94,33 +94,26 @@ blog:
   description: "Some of my recent thoughts"
 faq:
   title: Frequently Asked Questions
-  description: Answers to common questions about my process and services.
+  description: Answers to common questions about me.
   categories:
-    - title: Services & Process
+    - title: Who I Am
       questions:
+        - label: What are you in one sentence?
+          content: |
+            I'm a full-stack engineer who turns ideas into reliable, user-friendly digital products with a consistent experience.
+        - label: What's your background?
+          content: |
+            I started in IT and network administration, which gave me a strong foundation in infrastructure and system reliability. Over time, I transitioned into full-stack development, where I could combine my technical skills with my passion for design and user experience. This blend allows me to create solutions that are not only functional but also intuitive and visually appealing.
+    - title: Work & Services
+      questions:
+        - label: What kind of projects do you work on?
+          content: |
+            I specialize in end-to-end website development and deployment, supporting projects from concept to launch. I also handle graphic design and video editing to enhance brand and content presentation, while taking care of network operations to ensure system stability and smooth website performance.
         - label: What services do you offer?
           content: |
-            I design and build end-to-end web experiences. That means UX research, visual systems, Nuxt/Vue front-end engineering, API development, and deployment to cloud or on-prem infrastructure. Because of my IT and networking background, I can also take care of hosting setups, observability, and light DevOps so your product is stable after launch.
-    - title: Pricing & Timelines
+            I offer full-stack development services, including front-end and back-end development, as well as graphic design and video editing to enhance brand and content presentation. I also provide network operations support to ensure system stability and smooth website performance.
+    - title: Collaboration & Contact
       questions:
-        - label: How much does a project typically cost?
+        - label: How can I contact you?
           content: |
-            Budgets vary by scope, integrations, and infrastructure needs. Full-stack engagements that include design, development, and deployment usually start around $6,000 and scale toward $20,000+ for multi-surface platforms. I’m happy to break work into phases if that fits your cash flow better.
-        - label: What are your payment terms?
-          content: |
-            I typically request 35% upfront to reserve the slot, 35% at the midpoint milestone, and the remaining 30% upon delivery. For retainers or ops support we can switch to a monthly invoice after the first engagement.
-        - label: How long does a typical project take?
-          content: |
-            Small marketing sites and integrations usually ship in 3-4 weeks. Complex dashboards, API work, or deployments that require infrastructure coordination take 6-10 weeks. I provide a milestone schedule after discovery so you know exactly what happens when.
-        - label: Do you offer retainers or ongoing support?
-          content: |
-            Yes. Many teams keep me on for incremental features, reliability work, or network maintenance. Retainers can cover a set amount of hours or be structured around specific deliverables—we’ll tailor it to your roadmap.
-    - title: About Me
-      questions:
-        - label: What do you enjoy most about your work?
-          content: |
-            I love connecting the dots between product strategy, clean design, and resilient engineering. Turning messy specs into something elegant and reliable—and watching users succeed with it—is what keeps me energized.
-        - label: What are your hobbies outside of work?
-          content: |
-            When I'm off the clock in Dongguan, I unwind by taking mountain drives, hiking local peaks, and squeezing in badminton matches.
-            Piano practice and long music sessions help me reset before the next round of product work.
+            You can reach me via my [GitHub profile](https://github.com/mou7s), where you'll find my projects and contributions, or [schedule a meeting with me](https://cal.com/mou7s/30min) directly. I'm always open to new opportunities and collaborations, so feel free to get in touch.
