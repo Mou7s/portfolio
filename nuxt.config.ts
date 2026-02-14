@@ -19,7 +19,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ["/"],
+      routes: ["/", "/ppi"],
       crawlLinks: true,
     },
   },
