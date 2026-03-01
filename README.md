@@ -1,62 +1,114 @@
-# Nuxt Portfolio Template
+# Mou7s Portfolio
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+基于 Nuxt 4 + Nuxt UI + Nuxt Content 的个人作品集网站，包含首页、经历、项目、博客、关于页，以及一个独立的 PPI 计算工具页。
 
-Use this template to create your own portfolio with [Nuxt UI](https://ui.nuxt.com).
+## 技术栈
 
-- [Live demo](https://portfolio-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/getting-started/installation)
+- Nuxt 4
+- @nuxt/ui
+- @nuxt/content
+- @vueuse/nuxt
+- nuxt-og-image
+- motion-v
+- TypeScript
+- pnpm
 
-<a href="https://portfolio-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/portfolio-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png">
-    <img alt="Nuxt Portfolio Template" src="https://ui.nuxt.com/assets/templates/nuxt/portfolio-dark.png">
-  </picture>
-</a>
+## 页面与路由
 
-## Quick Start
+- `/` 首页
+- `/experience` 工作经历
+- `/projects` 项目展示
+- `/blog` 博客列表
+- `/blog/[...slug]` 博客详情
+- `/about` 关于页
+- `/speaking` 演讲/活动页
+- `/ppi` PPI 计算器
 
-```bash [Terminal]
-npm create nuxt@latest -- -t github:nuxt-ui-templates/portfolio
+## 目录结构
+
+```text
+app/
+  components/      通用组件与 landing 模块
+  layouts/         布局
+  pages/           页面路由
+  assets/css/      全局样式入口（main.css）
+  utils/           工具函数
+content/           内容文件（yml / md）
+public/            静态资源
+nuxt.config.ts     Nuxt 配置
+content.config.ts  内容 schema 配置
 ```
 
-## Deploy your own
+## 本地开发
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=portfolio&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fportfolio&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fportfolio-dark.png&demo-url=https%3A%2F%2Fportfolio-template.nuxt.dev%2F&demo-title=Nuxt%20Portfolio%20Template&demo-description=A%20sleek%20portfolio%20template%20to%20showcase%20your%20work%2C%20skills%20and%20blog%20powered%20by%20Nuxt%20Content.)
-
-## Setup
-
-Make sure to install the dependencies:
+安装依赖：
 
 ```bash
 pnpm install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+启动开发环境：
 
 ```bash
 pnpm dev
 ```
 
-## Production
-
-Build the application for production:
+生产构建：
 
 ```bash
 pnpm build
 ```
 
-Locally preview production build:
+本地预览生产构建：
 
 ```bash
 pnpm preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 质量检查
 
-## Renovate integration
+执行 ESLint：
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+```bash
+pnpm lint
+```
+
+自动修复可修复问题：
+
+```bash
+pnpm lint:fix
+```
+
+执行类型检查：
+
+```bash
+pnpm typecheck
+```
+
+## 内容维护
+
+- 首页内容：`content/index.yml`
+- 关于页内容：`content/about.yml`
+- 经历页内容：`content/experience.yml`
+- 项目页头部配置：`content/projects.yml`
+- 项目条目：`content/projects/*.yml`
+- 博客页头部配置：`content/blog.yml`
+- 博客文章：`content/blog/*.md`
+
+新增内容前请确认字段满足 `content.config.ts` 中的 schema 定义。
+
+## 部署说明
+
+项目包含 PM2 配置文件：`ecosystem.config.cjs`。
+
+典型流程：
+
+1. `pnpm install`
+2. `pnpm build`
+3. `pm2 start ecosystem.config.cjs`
+
+默认配置下服务监听 `0.0.0.0:4000`，可在反向代理（如 Caddy / Nginx）后提供 HTTPS 与域名访问。
+
+## 说明
+
+当前仓库包含 `AGENTS.md`（协作与工程约束说明），贡献或协作开发时建议先阅读。
