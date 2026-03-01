@@ -1,8 +1,8 @@
 export default defineAppConfig({
   global: {
     picture: {
-      dark: "https://pic1.imgdb.cn/item/6926ac683203f7be0033f8c3.png",
-      light: "https://pic1.imgdb.cn/item/6926ac683203f7be0033f8c3.png",
+      dark: "https://avatars.githubusercontent.com/u/79881792?v=4",
+      light: "https://avatars.githubusercontent.com/u/79881792?v=4",
       alt: "My profile picture",
     },
     meetingLink: "https://cal.com/mou7s/30min/",
