@@ -1,6 +1,6 @@
 # Mou7s Portfolio
 
-基于 Nuxt 4 + Nuxt UI + Nuxt Content 的个人作品集网站，包含首页、经历、项目、博客、关于页，以及一个独立的 PPI 计算工具页。
+基于 Nuxt 4 + Nuxt UI + Nuxt Content 的个人作品集网站，包含首页、经历、项目、博客、关于与工具页面。
 
 ## 技术栈
 
@@ -28,7 +28,7 @@
 
 ```text
 app/
-  components/      通用组件与 landing 模块
+  components/      通用组件与页面模块
   layouts/         布局
   pages/           页面路由
   assets/css/      全局样式入口（main.css）
@@ -37,51 +37,23 @@ content/           内容文件（yml / md）
 public/            静态资源
 nuxt.config.ts     Nuxt 配置
 content.config.ts  内容 schema 配置
+AGENTS.md          协作规范
 ```
 
 ## 本地开发
 
-安装依赖：
-
 ```bash
 pnpm install
-```
-
-启动开发环境：
-
-```bash
 pnpm dev
 ```
 
-生产构建：
+## 构建与检查
 
 ```bash
 pnpm build
-```
-
-本地预览生产构建：
-
-```bash
 pnpm preview
-```
-
-## 质量检查
-
-执行 ESLint：
-
-```bash
 pnpm lint
-```
-
-自动修复可修复问题：
-
-```bash
 pnpm lint:fix
-```
-
-执行类型检查：
-
-```bash
 pnpm typecheck
 ```
 
@@ -109,6 +81,8 @@ pnpm typecheck
 
 默认配置下服务监听 `0.0.0.0:4000`，可在反向代理（如 Caddy / Nginx）后提供 HTTPS 与域名访问。
 
-## 说明
+## 协作说明
 
-当前仓库包含 `AGENTS.md`（协作与工程约束说明），贡献或协作开发时建议先阅读。
+- 开发前先阅读 `AGENTS.md`。
+- 提交前至少执行 `pnpm lint` 与 `pnpm typecheck`。
+- 请勿提交临时文件（例如 `#README.md#`、`.DS_Store`）。
