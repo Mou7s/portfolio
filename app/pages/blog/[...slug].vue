@@ -31,20 +31,6 @@ const breadcrumb = computed(() =>
   ).map(({ icon, ...link }) => link),
 );
 
-if (page.value.image) {
-  defineOgImage({ url: page.value.image });
-} else {
-  defineOgImageComponent(
-    "Blog",
-    {
-      headline: breadcrumb.value.map((item) => item.label).join(" > "),
-    },
-    {
-      fonts: ["Geist:400", "Geist:600"],
-    },
-  );
-}
-
 const title = page.value?.seo?.title || page.value?.title;
 const description = page.value?.seo?.description || page.value?.description;
 
@@ -53,9 +39,21 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogTitle: title,
+  ogImage: page.value.image,
+  twitterImage: page.value.image,
 });
 
-const articleLink = computed(() => `${window?.location}`);
+const articleLink = computed(() => {
+  if (import.meta.client) {
+    return window.location.href;
+  }
+
+  return route.fullPath;
+});
+
+const copyArticleLink = () => {
+  copyToClipboard(articleLink.value, "Article link copied to clipboard");
+};
 
 const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString("en-US", {
@@ -114,9 +112,7 @@ const formatDate = (dateString: string) => {
               variant="link"
               color="neutral"
               label="Copy link"
-              @click="
-                copyToClipboard(articleLink, 'Article link copied to clipboard')
-              "
+              @click="copyArticleLink"
             />
           </div>
           <UContentSurround :surround />

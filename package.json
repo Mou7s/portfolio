@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "NODE_OPTIONS=--max-old-space-size=8192 nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -19,8 +19,7 @@
     "@vueuse/nuxt": "^14.2.1",
     "better-sqlite3": "^12.6.2",
     "motion-v": "^2.0.0",
-    "nuxt": "^4.3.1",
-    "nuxt-og-image": "^6.0.3"
+    "nuxt": "^4.3.1"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
