@@ -12,6 +12,14 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  experimental: {
+    serverAppConfig: false,
+  },
+
+  ogImage: {
+    zeroRuntime: true,
+  },
+
   css: ["~/assets/css/main.css"],
 
   compatibilityDate: "2024-11-01",

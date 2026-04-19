@@ -57,6 +57,16 @@ pnpm lint:fix
 pnpm typecheck
 ```
 
+## 持续集成
+
+已新增 GitHub Actions CI：`.github/workflows/ci.yml`。
+该工作流在 `main` 分支的 push 和 pull_request 事件上运行，执行：
+
+- `pnpm install`
+- `pnpm lint`
+- `pnpm typecheck`
+- `pnpm build`
+
 ## 内容维护
 
 - 首页内容：`content/index.yml`
