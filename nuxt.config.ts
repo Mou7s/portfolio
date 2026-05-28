@@ -4,8 +4,8 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/ui",
     "@nuxt/content",
-    "@vueuse/nuxt",
     "motion-v/nuxt",
+    "nuxt-og-image",
   ],
 
   devtools: {
