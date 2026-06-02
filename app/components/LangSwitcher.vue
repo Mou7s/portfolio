@@ -1,42 +1,27 @@
 <script setup lang="ts">
 const { locale, setLocale } = useI18n()
 
-const handleLocaleChange = (code: 'en' | 'zh') => {
-  setLocale(code)
+const toggleLocale = () => {
+  const nextLocale = locale.value === 'zh' ? 'en' : 'zh'
+  setLocale(nextLocale as 'en' | 'zh')
 }
-
-const items = computed(() => [
-  [
-    {
-      label: 'English',
-      icon: 'i-lucide-globe',
-      disabled: locale.value === 'en',
-      onSelect: () => handleLocaleChange('en')
-    },
-    {
-      label: '简体中文',
-      icon: 'i-lucide-languages',
-      disabled: locale.value === 'zh',
-      onSelect: () => handleLocaleChange('zh')
-    }
-  ]
-])
 </script>
 
 <template>
-  <UDropdown
-    :items="items"
-    :ui="{
-      content: 'w-32 bg-elevated/90 backdrop-blur-md border border-default shadow-lg rounded-xl',
-      item: 'data-[disabled]:opacity-50 data-[disabled]:cursor-not-allowed text-xs py-1.5'
-    }"
-  >
+  <ClientOnly>
     <UButton
       color="neutral"
       variant="ghost"
-      icon="i-lucide-languages"
-      class="rounded-full w-8 h-8 flex items-center justify-center p-0"
-      :aria-label="locale === 'zh' ? '切换语言' : 'Switch Language'"
-    />
-  </UDropdown>
+      size="sm"
+      class="rounded-full font-medium text-xs px-2.5 h-8 flex items-center justify-center transition-all hover:bg-muted"
+      @click="toggleLocale"
+      :aria-label="locale === 'zh' ? 'Switch to English' : '切换为中文'"
+    >
+      <!-- 如果当前是中文，按钮显示 EN，提示切换到英文；反之亦然 -->
+      {{ locale === 'zh' ? 'EN' : '中文' }}
+    </UButton>
+    <template #fallback>
+      <div class="w-8 h-8" />
+    </template>
+  </ClientOnly>
 </template>
