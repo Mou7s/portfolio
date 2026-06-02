@@ -6,7 +6,22 @@ export default defineNuxtConfig({
     "@nuxt/content", // 内容管理系统
     "motion-v/nuxt", // 动画库
     "nuxt-og-image", // OG 图片生成
+    "@nuxtjs/i18n", // 国际化模块
   ],
+
+  i18n: {
+    locales: [
+      { code: "en", language: "en-US", name: "English", file: "en.json" },
+      { code: "zh", language: "zh-CN", name: "简体中文", file: "zh.json" }
+    ],
+    defaultLocale: "en",
+    strategy: "prefix_except_default",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root"
+    }
+  },
 
   // 启用开发工具
   devtools: {

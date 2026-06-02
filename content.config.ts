@@ -38,7 +38,7 @@ export default defineContentConfig({
   collections: {
     index: defineCollection({
       type: 'page',
-      source: 'index.yml',
+      source: '**/index.yml',
       schema: z.object({
         hero: z.object({
           links: z.array(createButtonSchema()),
@@ -75,7 +75,7 @@ export default defineContentConfig({
     }),
     projects: defineCollection({
       type: 'data',
-      source: 'projects/*.yml',
+      source: '**/projects/*.yml',
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
@@ -87,7 +87,7 @@ export default defineContentConfig({
     }),
     blog: defineCollection({
       type: 'page',
-      source: 'blog/*.md',
+      source: '**/blog/*.md',
       schema: z.object({
         minRead: z.number(),
         date: z.date(),
@@ -98,8 +98,8 @@ export default defineContentConfig({
     pages: defineCollection({
       type: 'page',
       source: [
-        { include: 'projects.yml' },
-        { include: 'blog.yml' }
+        { include: '**/projects.yml' },
+        { include: '**/blog.yml' }
       ],
       schema: z.object({
         links: z.array(createButtonSchema())
@@ -107,7 +107,7 @@ export default defineContentConfig({
     }),
     experience: defineCollection({
       type: 'page',
-      source: 'experience.yml',
+      source: '**/experience.yml',
       schema: createBaseSchema().extend({
         seo: z.object({
           title: z.string(),
@@ -130,7 +130,7 @@ export default defineContentConfig({
     }),
     speaking: defineCollection({
       type: 'page',
-      source: 'speaking.yml',
+      source: '**/speaking.yml',
       schema: z.object({
         links: z.array(createButtonSchema()),
         events: z.array(z.object({
@@ -144,7 +144,7 @@ export default defineContentConfig({
     }),
     about: defineCollection({
       type: 'page',
-      source: 'about.yml',
+      source: '**/about.yml',
       schema: z.object({
         content: z.object({}),
         images: z.array(createImageSchema())

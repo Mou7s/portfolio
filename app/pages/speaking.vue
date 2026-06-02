@@ -7,8 +7,9 @@ type Event = {
   category: 'Conference' | 'Live talk' | 'Podcast'
 }
 
-const { data: page } = await useAsyncData('speaking', () => {
-  return queryCollection('speaking').first()
+const { locale } = useI18n()
+const { data: page } = await useAsyncData(`speaking-${locale.value}`, () => {
+  return queryCollection('speaking').where("path", "=", `/${locale.value}/speaking`).first()
 })
 if (!page.value) {
   throw createError({
@@ -41,7 +42,7 @@ const groupedEvents = computed((): Record<Event['category'], Event[]> => {
 })
 
 function formatDate(dateString: string): string {
-  return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
+  return new Date(dateString).toLocaleDateString(locale.value === 'zh' ? 'zh-CN' : 'en-US', { year: 'numeric', month: 'long' })
 }
 </script>
 
@@ -78,7 +79,7 @@ function formatDate(dateString: string): string {
           <h2
             class="lg:sticky lg:top-16 text-xl font-semibold tracking-tight text-highlighted"
           >
-            {{ category.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase()) }}s
+            {{ $t('speaking.category.' + category) }}
           </h2>
         </div>
 
@@ -109,7 +110,7 @@ function formatDate(dateString: string): string {
             <UButton
               v-if="event.url"
               target="_blank"
-              :label="event.category === 'Podcast' ? 'Listen' : 'Watch'"
+              :label="event.category === 'Podcast' ? $t('speaking.listen') : $t('speaking.watch')"
               variant="link"
               class="p-0 pt-2 gap-0"
             >

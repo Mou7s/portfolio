@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import type { ExperienceCollectionItem } from "@nuxt/content";
 
+const { locale } = useI18n();
 const { data: page } = await useAsyncData<ExperienceCollectionItem | null>(
-  "experience",
+  `experience-${locale.value}`,
   () => {
-    return queryCollection("experience").first();
+    return queryCollection("experience").where("path", "=", `/${locale.value}/experience`).first();
   }
 );
 if (!page.value) {

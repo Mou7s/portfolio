@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData("projects-page", () => {
-  return queryCollection("pages").path("/projects").first();
+const { locale } = useI18n();
+const { data: page } = await useAsyncData(`projects-page-${locale.value}`, () => {
+  return queryCollection("pages").where("path", "=", `/${locale.value}/projects`).first();
 });
 if (!page.value) {
   throw createError({
@@ -10,8 +11,9 @@ if (!page.value) {
   });
 }
 
-const { data: projects } = await useAsyncData("projects", () => {
+const { data: projects } = await useAsyncData(`projects-${locale.value}`, () => {
   return queryCollection("projects")
+    .where("path", "LIKE", `/${locale.value}/projects/%`)
     .order("date", "DESC")
     .order("title", "ASC")
     .all();
@@ -84,7 +86,7 @@ useSeoMeta({
               :to="project.url"
               class="text-sm text-primary flex items-center"
             >
-              View Project
+              {{ $t('projects.view_project') }}
               <UIcon
                 name="i-lucide-arrow-right"
                 class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"

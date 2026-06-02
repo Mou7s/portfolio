@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const route = useRoute()
 const requestURL = useRequestURL()
+const { t } = useI18n()
 
-const pageTitle = 'PPI Calculator'
-const pageDescription = 'Free online PPI calculator. Enter your screen resolution and display size to instantly calculate pixel density (pixels per inch).'
+const pageTitle = computed(() => t('ppi.title'))
+const pageDescription = computed(() => t('ppi.description'))
 const canonicalUrl = computed(() =>
   new URL(route.path, requestURL.origin).toString()
 )
@@ -24,8 +25,8 @@ useSeoMeta({
 const structuredData = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  'name': pageTitle,
-  'description': pageDescription,
+  'name': pageTitle.value,
+  'description': pageDescription.value,
   'applicationCategory': 'UtilitiesApplication',
   'operatingSystem': 'Any',
   'url': canonicalUrl.value,
@@ -97,7 +98,7 @@ const resolutionText = computed(() => {
       >
         <div class="grid gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-end">
           <label class="block">
-            <span class="mb-2 block text-sm font-medium text-toned">Width (px)</span>
+            <span class="mb-2 block text-sm font-medium text-toned">{{ $t('ppi.width') }}</span>
             <input
               v-model.number="screenWidth"
               type="number"
@@ -112,7 +113,7 @@ const resolutionText = computed(() => {
           </div>
 
           <label class="block">
-            <span class="mb-2 block text-sm font-medium text-toned">Height (px)</span>
+            <span class="mb-2 block text-sm font-medium text-toned">{{ $t('ppi.height') }}</span>
             <input
               v-model.number="screenHeight"
               type="number"
@@ -124,13 +125,13 @@ const resolutionText = computed(() => {
         </div>
 
         <label class="mt-4 block">
-          <span class="mb-2 block text-sm font-medium text-toned">Screen Size (inches)</span>
+          <span class="mb-2 block text-sm font-medium text-toned">{{ $t('ppi.size') }}</span>
           <input
             v-model.number="displaySize"
             type="number"
             min="0"
             step="0.1"
-            placeholder="For example: 6.7, 13.3, 27"
+            :placeholder="$t('ppi.size_placeholder')"
             class="h-11 w-full rounded-xl border border-default bg-default px-3 text-base outline-none transition focus:border-primary"
           >
         </label>
@@ -138,7 +139,7 @@ const resolutionText = computed(() => {
         <div class="mt-5 grid gap-3 sm:grid-cols-3">
           <div class="rounded-xl border border-default/70 bg-default/60 p-4">
             <p class="text-xs uppercase tracking-wide text-toned">
-              Current Resolution
+              {{ $t('ppi.resolution') }}
             </p>
             <p class="mt-2 text-lg font-semibold">
               {{ resolutionText }}
@@ -147,7 +148,7 @@ const resolutionText = computed(() => {
 
           <div class="rounded-xl border border-default/70 bg-default/60 p-4">
             <p class="text-xs uppercase tracking-wide text-toned">
-              Diagonal Pixels
+              {{ $t('ppi.diagonal') }}
             </p>
             <p class="mt-2 text-lg font-semibold">
               {{ diagonalPixels ? numberFormatter.format(diagonalPixels) : '-' }}
@@ -156,7 +157,7 @@ const resolutionText = computed(() => {
 
           <div class="rounded-xl border border-primary/30 bg-primary/5 p-4">
             <p class="text-xs uppercase tracking-wide text-toned">
-              Display PPI
+              {{ $t('ppi.display_ppi') }}
             </p>
             <p class="mt-2 text-2xl font-semibold text-primary">
               {{ ppi ? ppi.toFixed(2) : '-' }}

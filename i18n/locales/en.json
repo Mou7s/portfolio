@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "blog": "Blog",
+    "about": "About"
+  },
+  "hero": {
+    "open_to_opportunities": "Open to opportunities",
+    "not_actively_looking": "Not actively looking"
+  },
+  "footer": {
+    "credits": "Built with Nuxt UI • © {year}"
+  },
+  "blog": {
+    "copy_link": "Copy link",
+    "link_copied": "Article link copied to clipboard",
+    "min_read": "{minutes} MIN READ",
+    "back_to_blog": "Blog"
+  },
+  "projects": {
+    "view_project": "View Project"
+  },
+  "speaking": {
+    "listen": "Listen",
+    "watch": "Watch",
+    "category": {
+      "Conference": "Conferences",
+      "Live talk": "Live Talks",
+      "Podcast": "Podcasts"
+    }
+  },
+  "ppi": {
+    "title": "PPI Calculator",
+    "description": "Free online PPI calculator. Enter your screen resolution and display size to instantly calculate pixel density (pixels per inch).",
+    "width": "Width (px)",
+    "height": "Height (px)",
+    "size": "Screen Size (inches)",
+    "size_placeholder": "For example: 6.7, 13.3, 27",
+    "resolution": "Current Resolution",
+    "diagonal": "Diagonal Pixels",
+    "display_ppi": "Display PPI"
+  }
+}

@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData("blog-page", () => {
-  return queryCollection("pages").path("/blog").first();
+const { locale } = useI18n();
+const { data: page } = await useAsyncData(`blog-page-${locale.value}`, () => {
+  return queryCollection("pages").where("path", "=", `/${locale.value}/blog`).first();
 });
 if (!page.value) {
   throw createError({
@@ -9,8 +10,8 @@ if (!page.value) {
     fatal: true,
   });
 }
-const { data: posts } = await useAsyncData("blogs", () =>
-  queryCollection("blog").order("date", "DESC").all(),
+const { data: posts } = await useAsyncData(`blogs-${locale.value}`, () =>
+  queryCollection("blog").where("path", "LIKE", `/${locale.value}/blog/%`).order("date", "DESC").all(),
 );
 if (!posts.value) {
   throw createError({

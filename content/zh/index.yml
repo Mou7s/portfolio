@@ -1,0 +1,96 @@
+seo:
+  title: "mou7s - 全栈工程师"
+  description: "欢迎来到我的作品集！我是 mou7s，一名坐标东莞的全栈工程师。我专注于打造兼具视觉美感与卓越功能的数字化体验。"
+title: "你好，我是 mou7s - 全栈工程师"
+description: "我致力于构建直观而现代的数字化产品，让设计与功能完美契合。扎根业务一线，我将 IT 运维、系统组网与前后端开发融会贯通，用代码与创意赋予灵感生命力。"
+hero:
+  links:
+    - label: "联系我"
+      to: https://github.com/mou7s
+      color: "neutral"
+  images:
+    - src: /pics/1.avif
+      alt: Random Image 1
+    - src: /pics/2.avif
+      alt: Random Image 2
+    - src: /pics/3.avif
+      alt: Random Image 3
+    - src: /pics/4.avif
+      alt: Random Image 4
+    - src: /pics/5.avif
+      alt: Random Image 5
+    - src: /pics/6.avif
+      alt: Random Image 6
+    - src: /pics/7.avif
+      alt: Random Image 7
+    - src: /pics/8.avif
+      alt: Random Image 8
+    - src: /pics/9.avif
+      alt: Random Image 9
+
+about:
+  title: "关于我"
+  description: |
+    作为拥有 2 年实践经验的全栈工程师，我负责网站的端到端开发与线上部署，全程护航项目从构思到最终上线。
+    我同时熟练掌握平面设计与视频剪辑，能有力提升品牌及内容的视觉表达，并负责企业网络运营，确保系统的安全稳定与网站的流畅访问。
+    通过将技术实现与视觉沟通有机结合，我致力于将复杂的业务需求转化为稳定、高品质且交互顺畅的数字产品。
+experience:
+  title: 工作经历
+  items:
+    - position: "IT 工程师 @ "
+      date: "2026 - 至今"
+      company:
+        name: 同科半导体
+        logo: "mdi:factory"
+        url: "https://www.ctk-elec.com/"
+        color: "#0066b3"  
+    - position: "全栈工程师 @ "
+      date: "2025 - 2026"
+      company:
+        name: 山泽
+        logo: "mdi:battery-charging"
+        url: "https://shanzesz.com"
+        color: "#029bed"
+    - position: "IT 与设计 @ "
+      date: "2024 - 2025"
+      company:
+        name: 新埔纸业
+        logo: "mdi:paper-roll"
+        url: "https://baike.baidu.com/item/%E4%B8%9C%E8%8E%9E%E5%B8%82%E6%96%B0%E5%9F%94%E7%BA%B8%E4%B8%9A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/51511095"
+        color: "#28c95e"
+    - position: "网络管理员 @ "
+      date: "2023 - 2024"
+      company:
+        name: 福特汽车
+        logo: "mdi:car"
+        url: "https://www.ford.com.cn"
+        color: "#47a8e5"
+
+blog:
+  title: "最新文章"
+  description: "记录我的技术思考与日常分享"
+faq:
+  title: 常见问题解答
+  description: 快速了解关于我的常见问题。
+  categories:
+    - title: 关于我是谁
+      questions:
+        - label: 用一句话概括你的定位？
+          content: |
+            我是一名擅长用代码与视觉设计将创意落地、确保系统高可用和优质用户体验的全栈工程师。
+        - label: 你的职业背景是什么？
+          content: |
+            我的职业起步于企业 IT 运维与网络系统管理，这培养了我对底层基础设施稳定性与系统安全的严谨意识。此后我逐步转向全栈开发领域，把扎实的网络工程经验与前端美学设计相结合，从而能设计出既底层稳健又上层优雅、易用的数字产品。
+    - title: 工作与服务
+      questions:
+        - label: 你平时主要做哪类项目？
+          content: |
+            我专注于企业官网及后台管理系统的全栈研发与部署交付。在技术开发之外，我也能提供高水准的平面视觉设计与视频宣传片剪辑服务，从软硬件组网到网站上线提供全流程的支持。
+        - label: 你能提供哪些具体的服务？
+          content: |
+            包括不限于：企业级全栈 Web 开发（Vue/React/Nuxt）、定制化 ERP 模块研发与系统运维支持、企业办公局域网组网与异地 VPN 组网方案设计、平面视觉设计（画册/海报/包装）与多媒体视频拍摄剪辑。
+    - title: 合作与联系
+      questions:
+        - label: 如何与你取得联系？
+          content: |
+            您可以通过我的 [GitHub 个人主页](https://github.com/mou7s) 了解我的开源项目和日常提交，也可以直接 [在线预约我的会议](https://cal.com/mou7s/30min)。非常期待与您的精彩合作！

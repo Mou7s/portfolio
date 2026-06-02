@@ -1,0 +1,7 @@
+title: 博客
+description: 我在这里记录关于 Web 开发、网络工程和数码摄影的思考与分享。
+links:
+  - label: "订阅 RSS"
+    icon: "i-lucide-rss"
+    color: "neutral"
+    variant: "ghost"

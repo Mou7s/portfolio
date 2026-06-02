@@ -1,0 +1,14 @@
+title: 扫雷游戏 (Nuxt)
+description: 基于 Nuxt 开发了功能完整的经典扫雷游戏，实现了核心游戏逻辑、网格动态生成以及输赢判定条件。加入了深色模式以提供更好的视觉舒适度，并部署在 Netlify 以便公众访问和轻松分享。
+image: /pics/minesweeper.avif
+url: "https://nuxtminesweeper.netlify.app"
+tags:
+  [
+    "Nuxt",
+    "JavaScript",
+    "游戏开发",
+    "扫雷",
+    "深色模式",
+    "Netlify",
+  ]
+date: "2023"

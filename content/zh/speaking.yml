@@ -1,0 +1,45 @@
+title: 演讲与分享
+description: 
+events:
+  - category: Conference
+    title: "弥合差距：面向设计师-开发人员协作的设计系统"
+    date: "2024-10-26"
+    location: "VueConf US, 迈阿密, 佛罗里达州"
+    url: "#"
+  - category: Conference
+    title: "直观界面：在 Nuxt.js 应用中应用 UX 原则"
+    date: "2024-06-15"
+    location: "Nuxt Nation, 在线"
+    url: "#"
+  - category: Conference
+    title: "无障碍优先：构建包容性的 Web 应用"
+    date: "2023-11-08"
+    location: "波士顿 Web 性能 Meetup, 波士顿, 马萨诸塞州"
+  - category: Live talk
+    title: "精通 Figma 和 Vue 中的组件设计"
+    date: "2024-08-20"
+    location: "设计与开发波士顿 Meetup, 波士顿, 马萨诸塞州"
+    url: "#"
+  - category: Live talk
+    title: "从线框图到网页：实用的前端开发工作流"
+    date: "2024-03-05"
+    location: "前公司内部工作坊"
+  - category: Live talk
+    title: "用户研究在产品开发中的力量"
+    date: "2023-09-12"
+    location: "波士顿大学客座演讲, 波士顿, 马萨诸塞州"
+  - category: Podcast
+    title: "为开发者设计：UX 的视角"
+    date: "2024-07-18"
+    location: "Syntax.fm (嘉宾)"
+    url: "#"
+  - category: Podcast
+    title: "前端框架与设计工具的未来"
+    date: "2024-01-30"
+    location: "Design Details 播客 (嘉宾)"
+    url: "#"
+  - category: Podcast
+    title: "在 UX/UI 和开发领域建立职业生涯"
+    date: "2023-05-22"
+    location: "TechForward 波士顿播客"
+    url: "#"

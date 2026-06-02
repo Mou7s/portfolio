@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const navLinks = useNavLinks();
+const { locale } = useI18n();
+
 // 获取当前的颜色模式（亮色或暗色）
 const colorMode = useColorMode();
 
@@ -15,9 +18,6 @@ useHead({
     { key: "theme-color", name: "theme-color", content: color },
   ],
   link: [{ rel: "icon", href: "/favicon.ico" }],
-  htmlAttrs: {
-    lang: "en",
-  },
 });
 
 // 配置 SEO 与社交分享卡片

@@ -4,9 +4,20 @@ import { mapContentNavigation } from "@nuxt/ui/utils/content";
 import { findPageBreadcrumb } from "@nuxt/content/utils";
 
 const route = useRoute();
+const { locale } = useI18n();
 
-const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection("blog").path(route.path).first(),
+const queryPath = computed(() => {
+  const path = route.path;
+  // 如果路径是以当前语言编码开头的，说明已经包含了前缀
+  if (path.startsWith(`/${locale.value}/`) || path === `/${locale.value}`) {
+    return path;
+  }
+  // 否则，说明为默认的无前缀路由，我们需要在前面补上前缀，以匹配物理的 content/en/blog/... 路径
+  return `/${locale.value}${path}`;
+});
+
+const { data: page } = await useAsyncData(`blog-${queryPath.value}`, () =>
+  queryCollection("blog").path(queryPath.value).first(),
 );
 if (!page.value)
   throw createError({
@@ -14,15 +25,16 @@ if (!page.value)
     statusMessage: "Page not found",
     fatal: true,
   });
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryCollectionItemSurroundings("blog", route.path, {
+
+const { data: surround } = await useAsyncData(`blog-surround-${queryPath.value}`, () =>
+  queryCollectionItemSurroundings("blog", queryPath.value, {
     fields: ["description"],
   }),
 );
 
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
 const blogNavigation = computed(
-  () => navigation.value.find((item) => item.path === "/blog")?.children || [],
+  () => navigation.value.find((item) => item.path === `/${locale.value}/blog`)?.children || [],
 );
 
 const breadcrumb = computed(() =>
@@ -51,12 +63,13 @@ const articleLink = computed(() => {
   return route.fullPath;
 });
 
+const { t } = useI18n();
 const copyArticleLink = () => {
-  copyToClipboard(articleLink.value, "Article link copied to clipboard");
+  copyToClipboard(articleLink.value, t("blog.link_copied"));
 };
 
 const formatDate = (dateString: string) => {
-  return new Date(dateString).toLocaleDateString("en-US", {
+  return new Date(dateString).toLocaleDateString(locale.value === 'zh' ? 'zh-CN' : 'en-US', {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -68,9 +81,9 @@ const formatDate = (dateString: string) => {
   <UMain class="mt-20 px-2">
     <UContainer class="relative min-h-screen">
       <UPage v-if="page">
-        <ULink to="/blog" class="text-sm flex items-center gap-1">
+        <ULink :to="useLocalePath()('/blog')" class="text-sm flex items-center gap-1">
           <UIcon name="lucide:chevron-left" />
-          Blog
+          {{ $t('blog.back_to_blog') }}
         </ULink>
         <div class="flex flex-col gap-3 mt-8">
           <div
@@ -80,7 +93,7 @@ const formatDate = (dateString: string) => {
               {{ formatDate(page.date) }}
             </span>
             <span v-if="page.date && page.minRead"> - </span>
-            <span v-if="page.minRead"> {{ page.minRead }} MIN READ </span>
+            <span v-if="page.minRead"> {{ $t('blog.min_read', { minutes: page.minRead }) }} </span>
           </div>
           <img
             :src="page.image"
@@ -111,7 +124,7 @@ const formatDate = (dateString: string) => {
               size="sm"
               variant="link"
               color="neutral"
-              label="Copy link"
+              :label="$t('blog.copy_link')"
               @click="copyArticleLink"
             />
           </div>

@@ -110,8 +110,8 @@ defineProps<{
             :to="global.available ? global.meetingLink : ''"
             :label="
               global.available
-                ? 'Open to opportunities'
-                : 'Not actively looking'
+                ? $t('hero.open_to_opportunities')
+                : $t('hero.not_actively_looking')
             "
           >
             <template #leading>
