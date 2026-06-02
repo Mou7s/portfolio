@@ -5,10 +5,10 @@ date: 2026-02-23
 image: https://avatars.githubusercontent.com/u/61367819?s=48&v=4
 minRead: 10
 author:
-  name: Chuge Liu
+  name: mou7s
   avatar:
     src: https://avatars.githubusercontent.com/u/79881792?v=4
-    alt: Chuge Liu
+    alt: mou7s
 ---
 
 ## Introduction

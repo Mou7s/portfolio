@@ -5,10 +5,10 @@ date: 2025-12-02
 image: https://upload.wikimedia.org/wikipedia/commons/6/64/Dall-e_3_%28jan_%2724%29_artificial_intelligence_icon.png
 minRead: 6
 author:
-  name: Chuge Liu
+  name: mou7s
   avatar:
     src: https://avatars.githubusercontent.com/u/79881792?v=4
-    alt: Chuge Liu
+    alt: mou7s
 ---
 
 To this day, the common computer programs used by people are almost all written by software developers from scratch. For example, now that a software developer needs to write a program to manage an online shopping mall. After careful consideration, the developer may propose the following solution: First, the user interacts with the application through the web browser (or mobile application). Then, the application interacts with the database engine to save transaction history and track the dynamic of each user. In this case, the core of the application - "business logic" - provides detailed instructions on how the application should operate in various scenarios.

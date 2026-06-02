@@ -5,10 +5,10 @@ date: 2026-02-23
 image: https://images.ctfassets.net/8aevphvgewt8/2Zamxo7a7F9K9jsTAl2EGA/bce1f04a40536e89ef543cb311f2968b/github-copilot-cli.png
 minRead: 15
 author:
-  name: Chuge Liu
+  name: mou7s
   avatar:
     src: https://avatars.githubusercontent.com/u/79881792?v=4
-    alt: Chuge Liu
+    alt: mou7s
 ---
 
 

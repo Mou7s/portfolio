@@ -7,8 +7,7 @@
     "dev": "nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
@@ -22,8 +21,7 @@
     "nuxt-og-image": "^6.5.1"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.15.2",
-    "eslint": "^10.4.0",
+
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.2"
   },

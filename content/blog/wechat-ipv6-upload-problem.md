@@ -5,10 +5,10 @@ date: 2025-12-02
 image: https://miro.medium.com/1*dSUrAN4j3hK0Uxv-oYaTfg.png
 minRead: 7
 author:
-  name: Chuge Liu
+  name: mou7s
   avatar:
     src: https://avatars.githubusercontent.com/u/79881792?v=4
-    alt: Chuge Liu
+    alt: mou7s
 ---
 
 Last month I installed an X86 soft router in our office to enable a full-network proxy. The system is iStoreOS, which turns on IPv6 by default, so every device on the intranet gets an IPv6 address. In most cases IPv6 works fine, but when I used WeChat to upload pictures or videos the speed dropped to only a few dozen KB per second—bad enough to ruin the experience.

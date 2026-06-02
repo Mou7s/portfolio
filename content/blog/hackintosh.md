@@ -5,10 +5,10 @@ date: 2026-02-23
 image: https://upload.wikimedia.org/wikipedia/commons/e/e4/Hackintosh-780x495.jpg
 minRead: 20
 author:
-  name: Chuge Liu
+  name: mou7s
   avatar:
     src: https://avatars.githubusercontent.com/u/79881792?v=4
-    alt: Chuge Liu
+    alt: mou7s
 ---
 
 ## Introduction
