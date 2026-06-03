@@ -82,7 +82,7 @@ export default defineContentConfig({
       })
     }),
     projects: defineCollection({
-      type: 'data',
+      type: 'page',
       source: '**/projects/*.yml',
       schema: z.object({
         title: z.string().nonempty(),
