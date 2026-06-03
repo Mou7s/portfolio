@@ -27,6 +27,8 @@ useSeoMeta({
   description: page.value?.seo?.description || page.value?.description,
   ogDescription: page.value?.seo?.description || page.value?.description,
 });
+
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -58,7 +60,7 @@ useSeoMeta({
           <UBlogPost
             variant="naked"
             orientation="horizontal"
-            :to="post.path"
+            :to="localePath(post.path)"
             v-bind="post"
             :ui="{
               root: 'md:grid md:grid-cols-2 group overflow-visible transition-all duration-300',

@@ -32,6 +32,18 @@ const { data: surround } = await useAsyncData(`blog-surround-${queryPath.value}`
   }),
 );
 
+const localePath = useLocalePath();
+const formattedSurround = computed(() => {
+  if (!surround.value) return [];
+  return surround.value.map(item => {
+    if (!item) return null;
+    return {
+      ...item,
+      to: localePath(item.path || item.to)
+    }
+  }).filter(Boolean);
+});
+
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
 const blogNavigation = computed(
   () => navigation.value.find((item) => item.path === `/${locale.value}/blog`)?.children || [],
@@ -128,7 +140,7 @@ const formatDate = (dateString: string) => {
               @click="copyArticleLink"
             />
           </div>
-          <UContentSurround :surround />
+          <UContentSurround :surround="formattedSurround" />
         </UPageBody>
       </UPage>
     </UContainer>
