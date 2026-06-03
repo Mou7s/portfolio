@@ -7,7 +7,10 @@
     "about": "关于"
   },
   "hero": {
-    "open_to_opportunities": "寻求合作与工作机会",
+    "open_to_opportunities": "接受合作与工作机会",
+    "open_to_remote": "接受远程工作机会",
+    "open_to_onsite": "接受现场工作机会",
+    "open_to_hybrid": "接受混合办公机会",
     "not_actively_looking": "暂不考虑新机会"
   },
   "footer": {

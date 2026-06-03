@@ -42,9 +42,17 @@ export default defineContentConfig({
       schema: z.object({
         hero: z.object({
           links: z.array(createButtonSchema()),
-          images: z.array(createImageSchema())
+          images: z.array(createImageSchema()).optional()
         }),
         about: createBaseSchema(),
+        skills: z.object({
+          title: z.string(),
+          description: z.string(),
+          items: z.array(z.object({
+            name: z.string(),
+            items: z.array(z.string())
+          }))
+        }).optional(),
         experience: createBaseSchema().extend({
           items: z.array(z.object({
             date: z.date(),

@@ -8,6 +8,9 @@
   },
   "hero": {
     "open_to_opportunities": "Open to opportunities",
+    "open_to_remote": "Open to remote work",
+    "open_to_onsite": "Open to on-site work",
+    "open_to_hybrid": "Open to hybrid work",
     "not_actively_looking": "Not actively looking"
   },
   "footer": {

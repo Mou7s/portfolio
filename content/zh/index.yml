@@ -1,46 +1,41 @@
 seo:
   title: "mou7s - 全栈工程师"
   description: "欢迎来到我的作品集！我是 mou7s，一名坐标东莞的全栈工程师。我专注于打造兼具视觉美感与卓越功能的数字化体验。"
-title: "你好，我是 mou7s - 全栈工程师"
-description: "我致力于构建直观而现代的数字化产品，让设计与功能完美契合。扎根业务一线，我将 IT 运维、系统组网与前后端开发融会贯通，用代码与创意赋予灵感生命力。"
+title: "mou7s | 全栈工程师"
+description: ""
 hero:
   links:
     - label: "联系我"
-      to: https://github.com/mou7s
+      to: mailto:mou7s@icloud.com
       color: "neutral"
-  images:
-    - src: /pics/1.avif
-      alt: Random Image 1
-    - src: /pics/2.avif
-      alt: Random Image 2
-    - src: /pics/3.avif
-      alt: Random Image 3
-    - src: /pics/4.avif
-      alt: Random Image 4
-    - src: /pics/5.avif
-      alt: Random Image 5
-    - src: /pics/6.avif
-      alt: Random Image 6
-    - src: /pics/7.avif
-      alt: Random Image 7
-    - src: /pics/8.avif
-      alt: Random Image 8
-    - src: /pics/9.avif
-      alt: Random Image 9
+      icon: "i-lucide-mail"
+      variant: "ghost"
 
 about:
   title: "关于我"
   description: |
-    作为拥有 2 年实践经验的全栈工程师，我负责网站的端到端开发与线上部署，全程护航项目从构思到最终上线。
+    作为拥有 3 年实践经验的全栈工程师，我负责网站的端到端开发与线上部署，全程护航项目从构思到最终上线。
     我同时熟练掌握平面设计与视频剪辑，能有力提升品牌及内容的视觉表达，并负责企业网络运营，确保系统的安全稳定与网站的流畅访问。
     通过将技术实现与视觉沟通有机结合，我致力于将复杂的业务需求转化为稳定、高品质且交互顺畅的数字产品。
+
+skills:
+  title: "专业技能"
+  description: "在全栈开发、系统网络组网与数字化运维中沉淀的技术栈与工具链。"
+  items:
+    - name: "全栈开发"
+      items: ["Nuxt", "Node.js", "Serverless & BaaS", "AI 辅助开发", "快速原型交付"]
+    - name: "网络与运维"
+      items: ["Linux / 服务部署", "ERP 定制与开发", "系统与硬件排障"]
+    - name: "设计与媒体"
+      items: ["平面设计 (Ps/Ai)", "视频拍摄剪辑", "印前设计"]
+
 experience:
   title: 工作经历
   items:
-    - position: "IT 工程师 @ "
+    - position: "全栈工程师 @ "
       date: "2026 - 至今"
       company:
-        name: 同科半导体
+        name: 通科半导体
         logo: "mdi:factory"
         url: "https://www.ctk-elec.com/"
         color: "#0066b3"  
@@ -51,7 +46,7 @@ experience:
         logo: "mdi:battery-charging"
         url: "https://shanzesz.com"
         color: "#029bed"
-    - position: "IT 与设计 @ "
+    - position: "IT 工程师 @ "
       date: "2024 - 2025"
       company:
         name: 新埔纸业

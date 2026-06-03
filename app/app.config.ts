@@ -7,7 +7,8 @@ export default defineAppConfig({
     },
     meetingLink: "https://cal.com/mou7s/30min/",
     email: "mou7s@icloud.com",
-    available: false,
+    available: true,
+    workPreference: "remote",
   },
   ui: {
     colors: {
@@ -28,22 +29,16 @@ export default defineAppConfig({
     colorMode: false,
     links: [
       {
-        icon: "i-simple-icons-steam",
-        to: "https://steamcommunity.com/id/mou7s/",
-        target: "_blank",
-        "aria-label": "Mou7s on Steam",
-      },
-      {
         icon: "i-simple-icons-github",
         to: "https://github.com/mou7s",
         target: "_blank",
         "aria-label": "Mou7s on GitHub",
       },
       {
-        icon: "i-simple-icons-bilibili",
-        to: "https://space.bilibili.com/259438522",
+        icon: "i-simple-icons-linkedin",
+        to: "https://www.linkedin.com/in/mou7s/",
         target: "_blank",
-        "aria-label": "Mou7s on Bilibili",
+        "aria-label": "Mou7s on LinkedIn",
       },
       {
         icon: "i-simple-icons-x",

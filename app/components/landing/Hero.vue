@@ -12,7 +12,7 @@ defineProps<{
   <UPageHero
     :ui="{
       headline: 'flex items-center justify-center',
-      title: 'text-shadow-md max-w-lg mx-auto',
+      title: 'text-shadow-md max-w-2xl mx-auto',
       links: 'mt-4 flex-col justify-center items-center',
     }"
   >
@@ -63,7 +63,7 @@ defineProps<{
       </Motion>
     </template>
 
-    <template #description>
+    <template #description v-if="page.description">
       <Motion
         :initial="{
           scale: 1.1,
@@ -106,11 +106,10 @@ defineProps<{
           <UButton
             :color="global.available ? 'success' : 'error'"
             variant="ghost"
-            class="gap-2"
-            :to="global.available ? global.meetingLink : ''"
+            class="gap-2 cursor-default pointer-events-none select-none"
             :label="
               global.available
-                ? $t('hero.open_to_opportunities')
+                ? $t(`hero.open_to_${global.workPreference || 'opportunities'}`)
                 : $t('hero.not_actively_looking')
             "
           >
@@ -159,6 +158,7 @@ defineProps<{
     </template>
 
     <UMarquee
+      v-if="page.hero.images && page.hero.images.length"
       pause-on-hover
       class="py-2 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:40s]"
     >

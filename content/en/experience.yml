@@ -7,7 +7,7 @@ links:
   - label: "Contact Me"
 experiences:
   - company: "Dongguan Tongke Semiconductor Co., Ltd."
-    role: "IT Engineer"
+    role: "Full-stack Engineer"
     period: "2026.01 - Present"
     location: "Dongguan"
     summary: "Lead IT operations for a 200-person semiconductor company, covering network architecture, ERP support, and digital transformation initiatives to improve efficiency and security."
@@ -41,7 +41,7 @@ experiences:
       - "Design/Editing"
       - "ERP & Network Ops"
   - company: "Dongguan Xinpu Paper Co., Ltd."
-    role: "Network Engineer"
+    role: "IT Engineer"
     period: "2025.01 - 2025.07"
     location: "Dongguan"
     summary: "Rebuilt the network topology for a 200-person company to improve ERP and internal systems while also supporting surveillance, design, and event planning."

@@ -1,43 +1,37 @@
 seo:
   title: "mou7s - Full-stack Engineer"
   description: "Welcome to my portfolio! I'm mou7s, a full-stack engineer based in Dongguan. I specialize in creating user-centered digital experiences that are both beautiful and functional."
-title: "Hey, I'm mou7s - Full-stack Engineer"
-description: "I craft intuitive digital experiences where design and functionality seamlessly converge. Grounded on the front lines of the company, I bridge IT and networking with front- and back-end development, bringing ideas to life through code and creativity."
+title: "mou7s | Full-Stack Developer"
+description: ""
 hero:
   links:
     - label: "Contact Me"
-      to: https://github.com/mou7s
+      to: mailto:mou7s@icloud.com
       color: "neutral"
-  images:
-    - src: /pics/1.avif
-      alt: Random Image 1
-    - src: /pics/2.avif
-      alt: Random Image 2
-    - src: /pics/3.avif
-      alt: Random Image 3
-    - src: /pics/4.avif
-      alt: Random Image 4
-    - src: /pics/5.avif
-      alt: Random Image 5
-    - src: /pics/6.avif
-      alt: Random Image 6
-    - src: /pics/7.avif
-      alt: Random Image 7
-    - src: /pics/8.avif
-      alt: Random Image 8
-    - src: /pics/9.avif
-      alt: Random Image 9
+      icon: "i-lucide-mail"
+      variant: "ghost"
 
 about:
   title: "About Me"
   description: |
-    As a full-stack engineer with 2 years of experience, I manage end-to-end website development and deployment, supporting projects from concept to launch. 
+    As a full-stack engineer with 3 years of experience, I manage end-to-end website development and deployment, supporting projects from concept to launch. 
     I also handle graphic design and video editing to enhance brand and content presentation, while taking care of network operations to ensure system stability and smooth website performance. 
     With a balanced approach to both technical implementation and visual communication, I turn requirements into reliable, user-friendly digital products with a consistent experience.
+
+skills:
+  title: "Technical Skills"
+  description: "Core technologies, networking infrastructure, and creative tools in my daily workflow."
+  items:
+    - name: "Full-Stack Development"
+      items: ["Nuxt", "Node.js", "Serverless & BaaS", "AI-Assisted Development", "Rapid Prototyping"]
+    - name: "Networking & IT Ops"
+      items: ["Linux & Web Deployment", "ERP Customization & Development", "Systems & Hardware Troubleshooting"]
+    - name: "Design & Media"
+      items: ["Graphic Design (Ps/Ai)", "Video Editing", "Pre-press Design"]
 experience:
   title: Work Experience
   items:
-    - position: "IT Engineer at"
+    - position: "Full-stack Engineer at "
       date: "2026 - Present"
       company:
         name: CTK-ELEC
@@ -51,7 +45,7 @@ experience:
         logo: "mdi:battery-charging"
         url: "https://shanzesz.com"
         color: "#029bed"
-    - position: "IT & Designer at"
+    - position: "IT Engineer at"
       date: "2024 - 2025"
       company:
         name: Xinpu
