@@ -1,2 +1,7 @@
 title: Latest Articles
 description: Some of my recent thoughts on design, development, and the tech industry.
+links:
+  - label: "RSS Feed"
+    icon: "i-lucide-rss"
+    color: "neutral"
+    variant: "ghost"
