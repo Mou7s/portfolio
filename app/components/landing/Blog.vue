@@ -6,7 +6,11 @@ defineProps<{
 }>()
 
 const { locale } = useI18n()
-const localePath = useLocalePath()
+
+const resolveBlogLink = (path: string) => {
+  const slug = path.replace(/^\/(en|zh)\/blog\//, '').replace(/^blog\//, '')
+  return locale.value === 'zh' ? `/zh/blog/${slug}` : `/blog/${slug}`
+}
 
 const { data: posts } = await useAsyncData('index-blogs-' + locale.value, () =>
   queryCollection('blog').where('path', 'LIKE', `/${locale.value}/blog/%`).order('date', 'DESC').limit(3).all()
@@ -36,7 +40,7 @@ if (!posts.value) {
         orientation="horizontal"
         variant="naked"
         v-bind="post"
-        :to="localePath(post.path)"
+        :to="resolveBlogLink(post.path)"
         :ui="{
           root: 'group relative lg:items-start lg:flex ring-0 hover:ring-0',
           body: '!px-0',

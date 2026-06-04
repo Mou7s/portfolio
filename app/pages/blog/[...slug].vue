@@ -32,16 +32,23 @@ const { data: surround } = await useAsyncData(`blog-surround-${queryPath.value}`
   }),
 );
 
-const localePath = useLocalePath();
+const resolveBlogLink = (path: string) => {
+  const slug = path.replace(/^\/(en|zh)\/blog\//, '').replace(/^blog\//, '')
+  return locale.value === 'zh' ? `/zh/blog/${slug}` : `/blog/${slug}`
+};
 const formattedSurround = computed(() => {
   if (!surround.value) return [];
-  return surround.value.map(item => {
-    if (!item) return null;
-    return {
-      ...item,
-      to: localePath(item.path || item.to)
-    }
-  }).filter(Boolean);
+  return surround.value
+    .filter((item): item is NonNullable<typeof item> => !!item)
+    .map(item => {
+      const pathStr = (item.path || item.to || '') as string;
+      const resolvedPath = resolveBlogLink(pathStr);
+      return {
+        ...item,
+        path: resolvedPath,
+        to: resolvedPath
+      };
+    });
 });
 
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));

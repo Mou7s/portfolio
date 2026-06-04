@@ -28,7 +28,10 @@ useSeoMeta({
   ogDescription: page.value?.seo?.description || page.value?.description,
 });
 
-const localePath = useLocalePath();
+const resolveBlogLink = (path: string) => {
+  const slug = path.replace(/^\/(en|zh)\/blog\//, '').replace(/^blog\//, '')
+  return locale.value === 'zh' ? `/zh/blog/${slug}` : `/blog/${slug}`
+};
 </script>
 
 <template>
@@ -60,7 +63,7 @@ const localePath = useLocalePath();
           <UBlogPost
             variant="naked"
             orientation="horizontal"
-            :to="localePath(post.path)"
+            :to="resolveBlogLink(post.path)"
             v-bind="post"
             :ui="{
               root: 'md:grid md:grid-cols-2 group overflow-visible transition-all duration-300',
