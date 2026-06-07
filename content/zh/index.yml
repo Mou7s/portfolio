@@ -42,7 +42,7 @@ experience:
     - position: "全栈工程师 @ "
       date: "2025 - 2026"
       company:
-        name: 山泽
+        name: 山泽新能源
         logo: "mdi:battery-charging"
         url: "https://shanzesz.com"
         color: "#029bed"
@@ -88,4 +88,4 @@ faq:
       questions:
         - label: 如何与你取得联系？
           content: |
-            您可以通过我的 [GitHub 个人主页](https://github.com/mou7s) 了解我的开源项目和日常提交，也可以直接 [在线预约我的会议](https://cal.com/mou7s/30min)。非常期待与您的精彩合作！
+            您可以通过我的 [GitHub 个人主页](https://github.com/mou7s) 了解我的开源项目和日常提交，也可以直接发送邮件到 [mou7s@icloud.com](mailto:mou7s@icloud.com)。非常期待与您的精彩合作！

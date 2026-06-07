@@ -5,7 +5,6 @@ export default defineAppConfig({
       light: "https://avatars.githubusercontent.com/u/79881792?v=4",
       alt: "My profile picture",
     },
-    meetingLink: "https://cal.com/mou7s/30min/",
     email: "mou7s@icloud.com",
     available: true,
     workPreference: "remote",

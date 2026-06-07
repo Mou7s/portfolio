@@ -41,7 +41,7 @@ experience:
     - position: "Full-stack Engineer at"
       date: "2025 - 2026"
       company:
-        name: Shanze
+        name: Shanze New Energy
         logo: "mdi:battery-charging"
         url: "https://shanzesz.com"
         color: "#029bed"
@@ -110,4 +110,4 @@ faq:
       questions:
         - label: How can I contact you?
           content: |
-            You can reach me via my [GitHub profile](https://github.com/mou7s), where you'll find my projects and contributions, or [schedule a meeting with me](https://cal.com/mou7s/30min) directly. I'm always open to new opportunities and collaborations, so feel free to get in touch.
+            You can reach me via my [GitHub profile](https://github.com/mou7s), where you'll find my projects and contributions, or email me directly at [mou7s@icloud.com](mailto:mou7s@icloud.com). I'm always open to new opportunities and collaborations, so feel free to get in touch.

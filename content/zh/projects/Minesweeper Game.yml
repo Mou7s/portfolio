@@ -1,14 +1,16 @@
-title: 扫雷游戏 (Nuxt)
-description: 基于 Nuxt 开发了功能完整的经典扫雷游戏，实现了核心游戏逻辑、网格动态生成以及输赢判定条件。加入了深色模式以提供更好的视觉舒适度，并部署在 Netlify 以便公众访问和轻松分享。
+title: 无限扫雷 (Nuxt + Cloudflare)
+description: 基于 Nuxt 4、Canvas 与 WebSocket 开发的无限地图多人扫雷游戏，通过坐标哈希生成可无限延展的棋盘，并使用 Cloudflare Workers、Durable Object 与 KV 支撑实时同步、排行榜、玩家状态和线上持久化。
 image: /pics/minesweeper.avif
-url: "https://nuxtminesweeper.netlify.app"
+url: "https://infiniteminesweeper.mou7s.com"
 tags:
   [
-    "Nuxt",
-    "JavaScript",
+    "Nuxt 4",
+    "Canvas",
+    "WebSocket",
+    "Cloudflare Workers",
+    "Durable Object",
+    "KV",
     "游戏开发",
-    "扫雷",
-    "深色模式",
-    "Netlify",
+    "无限扫雷",
   ]
-date: "2023"
+date: "2026"

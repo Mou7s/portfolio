@@ -43,12 +43,7 @@ useSeoMeta({
     >
       <template #links>
         <div v-if="page.links" class="flex items-center gap-2">
-          <UButton
-            :label="page.links[0]?.label"
-            :to="global.meetingLink"
-            v-bind="page.links[0]"
-          />
-          <UButton :to="`mailto:${global.email}`" v-bind="page.links[1]" />
+          <UButton :to="`mailto:${global.email}`" v-bind="page.links[0]" />
         </div>
       </template>
     </UPageHero>
@@ -70,7 +65,6 @@ useSeoMeta({
           :description="project.description"
           orientation="horizontal"
           variant="naked"
-          :reverse="index % 2 === 1"
           class="group"
           :ui="{
             wrapper: 'max-sm:order-last',
@@ -93,11 +87,13 @@ useSeoMeta({
               />
             </ULink>
           </template>
-          <img
-            :src="project.image"
-            :alt="project.title"
-            class="object-cover w-full h-48 rounded-lg"
-          />
+          <div class="w-full overflow-hidden rounded-lg aspect-[16/9]">
+            <img
+              :src="project.image"
+              :alt="project.title"
+              class="size-full object-contain"
+            />
+          </div>
         </UPageCard>
       </Motion>
     </UPageSection>

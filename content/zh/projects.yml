@@ -1,10 +1,6 @@
 title: 个人项目
 description: 这里展示了我的开发项目、IT 基础设施集成以及创意作品。
 links:
-  - label: "预约会议"
-    icon: "i-lucide-calendar"
-    color: "primary"
   - label: "联系我"
     icon: "i-lucide-mail"
-    color: "neutral"
-    variant: "outline"
+    color: "primary"

@@ -1,6 +1,6 @@
 title: Designing Interfaces, Building Experiences.
 description: My focus is on bringing a product from concept to launch, covering front-end experience, back-end interfaces, databases, and deployment and maintenance.
 links:
-  - label: "Let's talk"
-    color: "neutral"
   - label: "Email me"
+    icon: "i-lucide-mail"
+    color: "neutral"
