@@ -28,6 +28,17 @@ useSeoMeta({
   ogDescription: page.value?.seo?.description || page.value?.description,
 });
 
+useHead({
+  link: [
+    {
+      rel: "alternate",
+      type: "application/rss+xml",
+      title: page.value?.title || "RSS",
+      href: locale.value === "zh" ? "/zh/rss.xml" : "/rss.xml",
+    },
+  ],
+});
+
 const resolveBlogLink = (path: string) => {
   const slug = path.replace(/^\/(en|zh)\/blog\//, '').replace(/^blog\//, '')
   return locale.value === 'zh' ? `/zh/blog/${slug}` : `/blog/${slug}`

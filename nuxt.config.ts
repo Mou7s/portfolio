@@ -1,5 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      siteUrl: "",
+    },
+  },
+
   // 使用的 Nuxt 模块
   modules: [
     "@nuxt/ui", // UI 组件库
@@ -46,8 +52,14 @@ export default defineNuxtConfig({
 
   // Nitro 服务器引擎配置
   nitro: {
+    serverAssets: [
+      {
+        baseName: "content",
+        dir: "../content",
+      },
+    ],
     prerender: {
-      routes: ["/", "/ppi"], // 预渲染的路由
+      routes: ["/", "/ppi", "/rss.xml", "/zh/rss.xml"], // 预渲染的路由
       crawlLinks: true, // 爬取链接以发现更多路由
     },
   },
