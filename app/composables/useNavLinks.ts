@@ -25,10 +25,5 @@ export const useNavLinks = () => {
       icon: "i-lucide-file-text",
       to: localePath("/blog"),
     },
-    {
-      label: t("nav.about"),
-      icon: "i-lucide-user",
-      to: localePath("/about"),
-    },
   ]);
 };

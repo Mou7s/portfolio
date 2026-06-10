@@ -150,14 +150,6 @@ export default defineContentConfig({
           url: z.string().optional()
         }))
       })
-    }),
-    about: defineCollection({
-      type: 'page',
-      source: '**/about.yml',
-      schema: z.object({
-        content: z.object({}),
-        images: z.array(createImageSchema())
-      })
     })
   }
 })
