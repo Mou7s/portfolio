@@ -13,7 +13,7 @@ author:
 
 ## Introduction
 
-A Hackintosh is a non-Apple computer running macOS. In this guide, you will learn a fast and practical workflow for installing macOS on PC hardware using [OpenCore](https://github.com/acidanthera/OpenCorePkg).
+A Hackintosh is a non-Apple computer running macOS. In this guide, you'll learn a fast and practical workflow for installing macOS on PC hardware using [OpenCore](https://github.com/acidanthera/OpenCorePkg).
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ A Hackintosh is a non-Apple computer running macOS. In this guide, you will lear
    *For the best [Hardware-Sniffer](https://github.com/lzhoang2801/Hardware-Sniffer) experience, use Windows.*
 2. The PC must be connected to the internet.
 3. Python must be installed on this PC.
-4. You need a USB drive.
+4. A USB drive (at least 16 GB).
 5. Download [Rufus](https://rufus.ie/#download).
 6. Download [OpCore-Simplify](https://github.com/lzhoang2801/OpCore-Simplify).
 7. Download [OpenCore](https://github.com/acidanthera/OpenCorePkg).  

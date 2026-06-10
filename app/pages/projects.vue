@@ -14,7 +14,7 @@ if (!page.value) {
 const { data: projects } = await useAsyncData(`projects-${locale.value}`, () => {
   return queryCollection("projects")
     .where("path", "LIKE", `/${locale.value}/projects/%`)
-    .order("date", "DESC")
+    .order("sort", "ASC")
     .order("title", "ASC")
     .all();
 });
@@ -71,9 +71,6 @@ useSeoMeta({
           }"
         >
           <template #leading>
-            <span class="text-sm text-muted">
-              {{ new Date(project.date).getFullYear() }}
-            </span>
           </template>
           <template v-if="project.url" #footer>
             <ULink

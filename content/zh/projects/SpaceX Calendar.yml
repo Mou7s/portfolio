@@ -1,0 +1,13 @@
+title: SpaceX Calendar
+sort: 1
+description: 支持多语言的 SpaceX 发射日历，用户可通过 ICS 订阅源自动同步发射日程。基于 Nuxt 构建，实时展示任务详情与倒计时。
+image: /pics/spacex-calendar.avif
+url: "https://spacex-calendar.mou7s.com"
+tags:
+  [
+    "Nuxt",
+    "SpaceX",
+    "日历",
+    "实时数据",
+    "太空",
+  ]

@@ -60,34 +60,40 @@ useSeoMeta({
           :transition="{ delay: 0.2 * index }"
           :in-view-options="{ once: true }"
         >
-          <div class="border border-default rounded-2xl p-6 bg-muted/20">
+          <div
+            class="group relative border border-default rounded-2xl p-6 bg-muted/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-primary/20"
+          >
+            <div
+              class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/40 to-primary/10 rounded-l-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+
             <div
               class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between"
             >
               <div>
-                <p
-                  class="text-xs font-medium uppercase tracking-[0.3em] text-muted"
+                <span
+                  class="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-muted bg-muted/50 px-3 py-1 rounded-full"
                 >
                   {{ experience.period }}
-                </p>
-                <h2 class="mt-1 text-xl font-semibold text-highlighted">
+                </span>
+                <h2 class="mt-2 text-xl font-semibold text-highlighted">
                   {{ experience.role }} · {{ experience.company }}
                 </h2>
-                <p class="text-sm text-muted">{{ experience.location }}</p>
+
               </div>
 
-              <div class="flex flex-wrap gap-2 text-xs text-muted">
+              <div class="flex flex-wrap gap-1.5 text-xs">
                 <span
                   v-for="(tag, tagIndex) in experience.stack"
                   :key="`${experience.company}-tag-${tagIndex}`"
-                  class="rounded-full border border-default px-3 py-1"
+                  class="rounded-full bg-elevated border border-default/60 px-3 py-1 font-medium text-muted"
                 >
                   {{ tag }}
                 </span>
               </div>
             </div>
 
-            <p class="mt-4 text-base text-default-700">
+            <p class="mt-4 text-base text-default-700 leading-relaxed">
               {{ experience.summary }}
             </p>
 
@@ -99,7 +105,7 @@ useSeoMeta({
                 :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
                 :transition="{ delay: 0.3 + 0.1 * highlightIndex }"
                 :in-view-options="{ once: true }"
-                class="rounded-xl border border-default/70 bg-default-50/50 p-4"
+                class="rounded-xl border border-default/70 bg-default-50/50 p-4 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 hover:border-primary/30"
               >
                 <p class="text-sm font-semibold text-highlighted">
                   {{ highlight.title }}

@@ -6,6 +6,7 @@ defineProps<{
 }>()
 
 const { locale } = useI18n()
+const localePath = useLocalePath()
 
 const resolveBlogLink = (path: string) => {
   const slug = path.replace(/^\/(en|zh)\/blog\//, '').replace(/^blog\//, '')
@@ -75,13 +76,13 @@ const formatDate = (dateStr?: string | Date) => {
           <!-- 卡片内容 -->
           <div class="p-5 flex flex-col flex-1">
             <!-- 元数据 -->
-            <div class="flex items-center gap-2 text-xs text-neutral-500 dark:text-neutral-400 font-medium mb-3">
-              <span class="inline-flex items-center bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded text-[10px] uppercase tracking-wider font-semibold text-neutral-600 dark:text-neutral-300">
+            <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400 font-medium mb-3">
+              <span class="inline-flex items-center bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded text-[10px] uppercase tracking-wider font-semibold text-neutral-600 dark:text-neutral-300 whitespace-nowrap">
                 {{ locale === 'zh' ? '专栏' : 'Blog' }}
               </span>
-              <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-              <span v-if="post.minRead" class="text-neutral-300 dark:text-neutral-700">•</span>
-              <span v-if="post.minRead">{{ post.minRead }} {{ locale === 'zh' ? '分钟阅读' : 'min read' }}</span>
+              <time :datetime="post.date" class="whitespace-nowrap">{{ formatDate(post.date) }}</time>
+              <span v-if="post.minRead" class="text-neutral-300 dark:text-neutral-700 select-none">•</span>
+              <span v-if="post.minRead" class="whitespace-nowrap">{{ post.minRead }} {{ locale === 'zh' ? '分钟阅读' : 'min read' }}</span>
             </div>
 
             <!-- 标题 -->
@@ -105,6 +106,25 @@ const formatDate = (dateStr?: string | Date) => {
           </div>
         </ULink>
       </Motion>
+    </div>
+
+    <!-- 查看更多文章按钮 -->
+    <div class="flex justify-center mt-10 w-full">
+      <UButton
+        :to="localePath('/blog')"
+        variant="subtle"
+        color="neutral"
+        size="md"
+        class="rounded-full px-6 py-2.5 font-medium group/btn border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
+      >
+        {{ locale === 'zh' ? '查看更多文章' : 'View All Articles' }}
+        <template #trailing>
+          <UIcon
+            name="i-lucide-arrow-right"
+            class="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
+          />
+        </template>
+      </UButton>
     </div>
   </UPageSection>
 </template>

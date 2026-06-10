@@ -1,4 +1,5 @@
 title: 无限扫雷 (Nuxt + Cloudflare)
+sort: 2
 description: 基于 Nuxt 4、Canvas 与 WebSocket 开发的无限地图多人扫雷游戏，通过坐标哈希生成可无限延展的棋盘，并使用 Cloudflare Workers、Durable Object 与 KV 支撑实时同步、排行榜、玩家状态和线上持久化。
 image: /pics/minesweeper.avif
 url: "https://infiniteminesweeper.mou7s.com"
@@ -13,4 +14,3 @@ tags:
     "游戏开发",
     "无限扫雷",
   ]
-date: "2026"

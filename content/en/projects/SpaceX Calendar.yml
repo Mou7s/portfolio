@@ -1,0 +1,13 @@
+title: SpaceX Calendar
+sort: 1
+description: An i18n-ready SpaceX launch calendar that lets users subscribe via ICS feed. Built with Nuxt, it auto-syncs upcoming launches, mission details, and countdown timers in real-time.
+image: /pics/spacex-calendar.avif
+url: "https://spacex-calendar.mou7s.com"
+tags:
+  [
+    "Nuxt",
+    "SpaceX",
+    "Calendar",
+    "Real-time Data",
+    "Space",
+  ]
