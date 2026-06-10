@@ -1,10 +1,12 @@
 seo:
   title: "工作经历 | 实践与成果"
   description: "具备全栈开发与 IT 基础设施建设经验，涵盖 Web 交付、图形设计、网络运营与 ERP 效率优化等多项代表性成果。"
-title: "工作经历与成果"
-description: "在全栈交付、企业网络组网与数字化运维中沉淀的代表性角色与成果。"
+title: "工作经历"
 links:
   - label: "联系我"
+    icon: "i-lucide-mail"
+    color: "neutral"
+    variant: "ghost"
 experiences:
   - company: "东莞市通科半导体有限公司"
     role: "全栈工程师"

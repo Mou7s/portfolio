@@ -1,10 +1,12 @@
 seo:
   title: "Experience | Work Experience & Outcomes"
   description: "Full-stack and infrastructure experience with representative outcomes across web delivery, design, and network/ERP operations."
-title: "Work Experience & Outcomes"
-description: "Selected roles with measurable outcomes across full-stack delivery, networking, and operational efficiency."
+title: "Work Experience"
 links:
   - label: "Contact Me"
+    icon: "i-lucide-mail"
+    color: "neutral"
+    variant: "ghost"
 experiences:
   - company: "Dongguan Tongke Semiconductor Co., Ltd."
     role: "Full-stack Engineer"
