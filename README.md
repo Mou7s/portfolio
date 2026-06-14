@@ -51,7 +51,6 @@ content/
 public/                静态资源
 content.config.ts      Nuxt Content collection schema
 nuxt.config.ts         Nuxt 配置
-ecosystem.config.cjs   PM2 部署配置
 ```
 
 ## 本地开发
@@ -121,21 +120,18 @@ pnpm typecheck
 
 ## 部署说明
 
-项目包含 PM2 配置文件：`ecosystem.config.cjs`。
+项目当前使用 Cloudflare Pages 产物格式构建，`nuxt.config.ts` 中的 Nitro preset 为 `cloudflare-pages`。
 
 典型流程：
 
 1. `pnpm install`
 2. `pnpm build`
-3. `pm2 start ecosystem.config.cjs`
+3. 使用 Cloudflare Pages 部署 `dist/` 目录
 
-默认配置下服务监听 `0.0.0.0:4000`，可在反向代理（如 Caddy / Nginx）后提供 HTTPS 与域名访问。
-
-如需更新已运行的服务：
+本地预览 Cloudflare Pages 产物可运行：
 
 ```bash
-pnpm build
-pm2 reload ecosystem.config.cjs
+pnpm wrangler pages dev dist
 ```
 
 ## 协作说明

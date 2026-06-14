@@ -52,6 +52,7 @@ export default defineNuxtConfig({
 
   // Nitro 服务器引擎配置
   nitro: {
+    preset: 'cloudflare-pages',
     serverAssets: [
       {
         baseName: "content",
