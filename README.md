@@ -1,6 +1,6 @@
 # Mou7s Portfolio
 
-基于 Nuxt 4、Nuxt UI 与 Nuxt Content 构建的个人作品集网站。项目以内容驱动为主，使用 YAML 管理页面配置与作品数据，使用 Markdown 管理博客文章，包含首页、经历、项目、博客、关于、演讲活动与 PPI 计算器页面。
+基于 Nuxt 4、Nuxt UI 与 Nuxt Content 构建的个人作品集网站。项目以内容驱动为主，使用 YAML 管理页面配置与作品数据，使用 Markdown 管理博客文章，包含首页、经历、项目、博客、演讲活动与 PPI 计算器页面。
 
 ## 功能概览
 
@@ -16,7 +16,6 @@
 - Nuxt 4
 - @nuxt/ui
 - @nuxt/content
-- @vueuse/nuxt
 - nuxt-og-image
 - motion-v
 - TypeScript
@@ -29,7 +28,6 @@
 - `/projects` 项目展示
 - `/blog` 博客列表
 - `/blog/[...slug]` 博客详情
-- `/about` 关于页
 - `/speaking` 演讲/活动页
 - `/ppi` PPI 计算器
 
@@ -45,9 +43,11 @@ app/
   pages/               页面路由
   utils/               工具函数
 content/
-  *.yml                页面配置与结构化内容
-  blog/*.md            博客文章
-  projects/*.yml       项目条目
+  en/                  英文内容
+  zh/                  中文内容
+  */*.yml              页面配置与结构化内容
+  */blog/*.md          博客文章
+  */projects/*.yml     项目条目
 public/                静态资源
 content.config.ts      Nuxt Content collection schema
 nuxt.config.ts         Nuxt 配置
@@ -85,27 +85,24 @@ NUXT_PUBLIC_SITE_URL=
 ```bash
 pnpm build
 pnpm preview
-pnpm lint
-pnpm lint:fix
 pnpm typecheck
 ```
 
 常用流程：
 
 - 开发时运行 `pnpm dev`
-- 提交前运行 `pnpm lint` 与 `pnpm typecheck`
+- 提交前运行 `pnpm typecheck`
 - 发布前运行 `pnpm build`，然后使用 `pnpm preview` 本地预览产物
 
 ## 内容维护
 
-- 首页内容：`content/index.yml`
-- 关于页内容：`content/about.yml`
-- 经历页内容：`content/experience.yml`
-- 项目页头部配置：`content/projects.yml`
-- 项目条目：`content/projects/*.yml`
-- 博客页头部配置：`content/blog.yml`
-- 博客文章：`content/blog/*.md`
-- 演讲/活动内容：`content/speaking.yml`
+- 首页内容：`content/en/index.yml`、`content/zh/index.yml`
+- 经历页内容：`content/en/experience.yml`、`content/zh/experience.yml`
+- 项目页头部配置：`content/en/projects.yml`、`content/zh/projects.yml`
+- 项目条目：`content/en/projects/*.yml`、`content/zh/projects/*.yml`
+- 博客页头部配置：`content/en/blog.yml`、`content/zh/blog.yml`
+- 博客文章：`content/en/blog/*.md`、`content/zh/blog/*.md`
+- 演讲/活动内容：`content/en/speaking.yml`、`content/zh/speaking.yml`
 
 新增内容前请确认字段满足 `content.config.ts` 中的 schema 定义。
 
@@ -137,5 +134,5 @@ pnpm wrangler dev
 ## 协作说明
 
 - 开发前先阅读 `AGENTS.md`。
-- 提交前至少执行 `pnpm lint` 与 `pnpm typecheck`。
+- 提交前至少执行 `pnpm typecheck`。
 - 请勿提交临时文件（例如 `#README.md#`、`.DS_Store`）。
