@@ -120,18 +120,18 @@ pnpm typecheck
 
 ## 部署说明
 
-项目当前使用 Cloudflare Pages 产物格式构建，`nuxt.config.ts` 中的 Nitro preset 为 `cloudflare-pages`。
+项目当前使用 Cloudflare Workers 部署，`nuxt.config.ts` 中的 Nitro preset 为 `cloudflare-module`。
 
 典型流程：
 
 1. `pnpm install`
 2. `pnpm build`
-3. 使用 Cloudflare Pages 部署 `dist/` 目录
+3. `pnpm wrangler deploy`
 
-本地预览 Cloudflare Pages 产物可运行：
+本地预览 Worker 产物可运行：
 
 ```bash
-pnpm wrangler pages dev dist
+pnpm wrangler dev
 ```
 
 ## 协作说明

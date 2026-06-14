@@ -48,11 +48,11 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
 
   // 兼容性日期，用于启用特定日期前的功能
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: "2026-06-14",
 
   // Nitro 服务器引擎配置
   nitro: {
-    preset: 'cloudflare-pages',
+    preset: "cloudflare-module",
     serverAssets: [
       {
         baseName: "content",
