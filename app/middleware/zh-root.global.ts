@@ -3,10 +3,10 @@ export default defineNuxtRouteMiddleware((to) => {
     return;
   }
 
-  if (to.path === "/zh") {
+  if (to.path === "/zh/") {
     return navigateTo(
       {
-        path: "/zh/",
+        path: "/zh",
         query: to.query,
         hash: to.hash,
       },
@@ -29,7 +29,7 @@ export default defineNuxtRouteMiddleware((to) => {
 
   return navigateTo(
     {
-      path: "/zh/",
+      path: "/zh",
       query: to.query,
       hash: to.hash,
     },
