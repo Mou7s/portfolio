@@ -26,3 +26,6 @@ logs
 
 # VSC
 .history
+
+# Temporary
+tmp/

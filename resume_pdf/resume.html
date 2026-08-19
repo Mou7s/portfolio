@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>刘楚歌 - 全栈开发工程师 个人简历</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 11px;
+      line-height: 1.48;
+      color: #27272a;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #18181b;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1.5px solid #e4e4e7;
+      flex-shrink: 0;
+      background: #f4f4f5;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 49.5% 42%;
+      transform: scale(2.2);
+      transform-origin: 49.5% 42%;
+    }
+
+    .header-info h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #09090b;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .header-info .role-tag {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: #52525b;
+      margin-top: 3px;
+      letter-spacing: 0.02em;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 10.5px;
+      color: #52525b;
+      line-height: 1.55;
+    }
+
+    .header-right a {
+      color: #09090b;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .header-right a:hover {
+      text-decoration: underline;
+    }
+
+    .dot-sep {
+      margin: 0 4px;
+      color: #d4d4d8;
+    }
+
+    /* Section Component */
+    .section {
+      margin-bottom: 9px;
+      break-inside: avoid;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #09090b;
+      white-space: nowrap;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: #e4e4e7;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 11px;
+      color: #3f3f46;
+      line-height: 1.5;
+    }
+
+    .summary-text strong {
+      color: #09090b;
+      font-weight: 600;
+    }
+
+    /* Skills Grid */
+    .skills-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5px 18px;
+      font-size: 10.5px;
+    }
+
+    .skill-row {
+      line-height: 1.4;
+      display: flex;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      color: #09090b;
+      min-width: 76px;
+      flex-shrink: 0;
+    }
+
+    .skill-detail {
+      color: #52525b;
+    }
+
+    /* Experience & Project Cards */
+    .item-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .item {
+      break-inside: avoid;
+    }
+
+    .item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .item-heading {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #09090b;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .item-sub {
+      font-size: 11px;
+      font-weight: 500;
+      color: #27272a;
+    }
+
+    .proj-link {
+      font-size: 10px;
+      font-weight: 500;
+      color: #0284c7;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      margin-left: 2px;
+    }
+
+    .proj-link:hover {
+      text-decoration: underline;
+    }
+
+    .item-date {
+      font-size: 10.5px;
+      font-weight: 400;
+      color: #71717a;
+      font-feature-settings: "tnum";
+      white-space: nowrap;
+    }
+
+    .item-desc {
+      font-size: 10.5px;
+      color: #52525b;
+      margin-bottom: 2px;
+      line-height: 1.45;
+    }
+
+    .bullet-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .bullet-points li {
+      position: relative;
+      padding-left: 10px;
+      font-size: 10.5px;
+      color: #3f3f46;
+      line-height: 1.45;
+      margin-bottom: 1.5px;
+    }
+
+    .bullet-points li::before {
+      content: "";
+      position: absolute;
+      left: 1px;
+      top: 6px;
+      width: 3px;
+      height: 3px;
+      background: #71717a;
+      border-radius: 50%;
+    }
+
+    .bullet-points li strong {
+      color: #18181b;
+      font-weight: 600;
+    }
+
+    /* Badges */
+    .badge-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin-top: 2.5px;
+    }
+
+    .badge {
+      font-size: 9.5px;
+      color: #52525b;
+      background: #f4f4f5;
+      padding: 0.5px 5px;
+      border-radius: 2px;
+      font-weight: 400;
+    }
+
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="avatar-wrapper">
+          <img src="./avatar_raw.jpg" alt="刘楚歌" class="avatar-img" />
+        </div>
+        <div class="header-info">
+          <h1>刘楚歌</h1>
+          <div class="role-tag">全栈开发工程师 · 3 年实践经验 · 坐标广东东莞</div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div>
+          <span>📧 <a href="mailto:mou7s@icloud.com">mou7s@icloud.com</a></span>
+          <span class="dot-sep">/</span>
+          <span>📍 广东东莞</span>
+        </div>
+        <div>
+          <span>🌐 <a href="https://mou7s.com" target="_blank">mou7s.com</a></span>
+          <span class="dot-sep">/</span>
+          <span>🐙 <a href="https://github.com/mou7s" target="_blank">github.com/mou7s</a></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 个人亮点 -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-title">Profile · 个人亮点</span>
+        <div class="section-line"></div>
+      </div>
+      <p class="summary-text">
+        专注于 <strong>Nuxt 4 / Vue 3 / Node.js 全栈交付</strong>、<strong>Serverless 边缘架构</strong>与<strong>企业级 ERP 深度集成</strong>。具备从需求调研、技术选型、前后端研发到生产部署的独立闭环能力。深入掌握金蝶 K3Cloud 架构体系，交付半导体制造 WMS 智能仓储与 MES 工序直通率看板；具备开源协议（RFC 5545）、全球多语言、企业骨干网运维及多媒体设计综合实践经验。
+      </p>
+    </section>
+
+    <!-- 专业技能 -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-title">Skills · 专业技能</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-wrapper">
+        <div class="skill-row">
+          <span class="skill-name">前端开发：</span>
+          <span class="skill-detail">Vue 3.5, Nuxt 4, TypeScript, Tailwind CSS 4, Nuxt UI 4, Pinia, Vite</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">后端与边缘：</span>
+          <span class="skill-detail">Nitro Server, Node.js, Cloudflare Workers, Spring Boot 3 (Java 21), RESTful</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">数据与缓存：</span>
+          <span class="skill-detail">MySQL, SQL Server, Cloudflare KV, Microsoft Garnet (Redis RESP 协议)</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">协议与企业：</span>
+          <span class="skill-detail">RFC 5545 (ICS/Webcal), 金蝶 K3Cloud ERP 二开, WMS 仓储, MES 看板, 企微 API</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">运维组网：</span>
+          <span class="skill-detail">Linux 运维, Nginx, Docker, 企业局域网/VPN 拓扑组网, AP/AC 无线漫游</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">设计与工程：</span>
+          <span class="skill-detail">Photoshop, Illustrator, 视频拍摄剪辑, Git, CI/CD, i18n 全球化</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心项目 -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-title">Featured Projects · 核心项目</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="item-group">
+        <!-- 项目 1: 半导体平台 -->
+        <div class="item">
+          <div class="item-top">
+            <div class="item-heading">
+              <span>半导体企业级数字化综合运营管理平台</span>
+              <span class="item-sub">· 全栈开发负责人</span>
+              <a href="https://ctksys.mou7s.com" target="_blank" class="proj-link">🔗 ctksys.mou7s.com ↗</a>
+            </div>
+            <span class="item-date">2026.01 - 至今</span>
+          </div>
+          <div class="item-desc">
+            为半导体制造企业研发的一体化全栈管理系统，覆盖 WMS 智能仓储、MES 制造质控、金蝶 ERP 联动及企业微信审批流。
+          </div>
+          <ul class="bullet-points">
+            <li><strong>金蝶 ERP 双链路集成：</strong>设计“WebAPI 业务单据流 + SQL Server 直连查询流”分流方案，实现自动过账与毫秒级库存联动。</li>
+            <li><strong>WMS 仓储与 MES 看板交付：</strong>独立交付多级库位扫码拣配与批次溯源；主导开发 processYield 看板，实现千万级工序直通率秒级分析。</li>
+            <li><strong>全栈与高性能底座：</strong>基于 Bun + Nuxt 4 + Nitro 构建前后端统一 TypeScript 体系，引入 Garnet 缓存大幅优化高频数据响应。</li>
+          </ul>
+          <div class="badge-wrap">
+            <span class="badge">Nuxt 4</span>
+            <span class="badge">Nitro</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">金蝶 K3Cloud</span>
+            <span class="badge">SQL Server</span>
+            <span class="badge">Garnet</span>
+            <span class="badge">WMS/MES</span>
+          </div>
+        </div>
+
+        <!-- 项目 2: Calendar Hub -->
+        <div class="item">
+          <div class="item-top">
+            <div class="item-heading">
+              <span>Calendar Hub 多主题日历订阅中心</span>
+              <span class="item-sub">· 独立全栈开发者</span>
+              <a href="https://calendarhub.mou7s.com" target="_blank" class="proj-link">🔗 calendarhub.mou7s.com ↗</a>
+            </div>
+            <span class="item-date">2025.10 - 至今</span>
+          </div>
+          <div class="item-desc">
+            基于边缘计算的实时日程订阅平台，将 SpaceX、F1、WTT 等多源高频动态日程转换为标准 Webcal/ICS 订阅。
+          </div>
+          <ul class="bullet-points">
+            <li><strong>Serverless 边缘架构与 SWR 缓存：</strong>采用 Nuxt 4 + Cloudflare Workers + KV 架构，结合 SWR 异步刷新，实现全球毫秒级低延迟分发。</li>
+            <li><strong>RFC 5545 协议与版本追踪：</strong>自研基于哈希的增量版本控制与直播保活算法，无缝兼容 Apple/Google/Outlook 原生日历。</li>
+            <li><strong>全球化与工程化交付：</strong>支持 7 国语言并搭建 LLM 自动化翻译工作流；编写 33 项核心单测，注入 JSON-LD 结构化 SEO 数据。</li>
+          </ul>
+          <div class="badge-wrap">
+            <span class="badge">Nuxt 4</span>
+            <span class="badge">Cloudflare Workers</span>
+            <span class="badge">Cloudflare KV</span>
+            <span class="badge">RFC 5545 (Webcal)</span>
+            <span class="badge">SWR 缓存</span>
+            <span class="badge">i18n</span>
+          </div>
+        </div>
+
+        <!-- 项目 3: 企业官网 -->
+        <div class="item">
+          <div class="item-top">
+            <div class="item-heading">
+              <span>企业官网及数字化运营管理系统</span>
+              <span class="item-sub">· 全栈工程师</span>
+            </div>
+            <span class="item-date">2025.07 - 2026.01</span>
+          </div>
+          <div class="item-desc">
+            主导新能源制造企业官网与后台管理系统的端到端研发，兼顾多媒体视觉表达与内部业务流转。
+          </div>
+          <ul class="bullet-points">
+            <li><strong>端到端交付：</strong>基于 Vue / Node.js / Tailwind CSS 独立完成响应式官网与 CMS 内容后台，保障 SEO 表现与高访问性能。</li>
+            <li><strong>多媒体资产赋能：</strong>主导展会宣传物料、品牌 Logo 重构与宣传视频剪辑，有力支撑市场推广与品牌出海。</li>
+          </ul>
+          <div class="badge-wrap">
+            <span class="badge">Vue 3</span>
+            <span class="badge">Node.js</span>
+            <span class="badge">Tailwind CSS</span>
+            <span class="badge">SEO 优化</span>
+            <span class="badge">多媒体设计</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 工作经历 -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-title">Experience · 工作经历</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="item-group">
+        <div class="item">
+          <div class="item-top">
+            <div class="item-heading">
+              <span>东莞市通科电子/半导体有限公司</span>
+              <span class="item-sub">· 全栈开发工程师</span>
+            </div>
+            <span class="item-date">2026.01 - 至今</span>
+          </div>
+          <ul class="bullet-points">
+            <li><strong>系统研发与 ERP 二开：</strong>主导公司内部业务管理系统研发；负责金蝶 K3Cloud 流程调整与二次开发，打通生产与仓储数据。</li>
+            <li><strong>官网运维：</strong>负责企业官方网站与对外数字化展示窗口的开发与持续性能调优。</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-top">
+            <div class="item-heading">
+              <span>东莞市山泽新能源科技有限公司</span>
+              <span class="item-sub">· 全栈工程师</span>
+            </div>
+            <span class="item-date">2025.07 - 2026.01</span>
+          </div>
+          <ul class="bullet-points">
+            <li><strong>全栈交付与运维：</strong>负责企业官网及后台管理系统的全栈研发部署与内容管理；统筹视觉设计、宣传视频制作及办公网络运维。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
