@@ -22,11 +22,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "en",
     strategy: "prefix_except_default",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      redirectOn: "root"
-    }
+    detectBrowserLanguage: false,
   },
 
   // 启用开发工具
@@ -60,7 +56,7 @@ export default defineNuxtConfig({
       },
     ],
     prerender: {
-      routes: ["/", "/ppi", "/rss.xml", "/zh/rss.xml"], // 预渲染的路由
+      routes: ["/", "/zh", "/ppi", "/rss.xml", "/zh/rss.xml"], // 预渲染的路由
       crawlLinks: true, // 爬取链接以发现更多路由
     },
   },
