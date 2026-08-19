@@ -1,5 +1,5 @@
 title: Infinite Minesweeper (Nuxt + Cloudflare)
-sort: 2
+sort: 3
 description: Built an infinite multiplayer Minesweeper game with Nuxt 4, Canvas, and WebSocket. The board expands through coordinate-based mine generation, while Cloudflare Workers, Durable Object, and KV handle realtime sync, leaderboards, player state, and persistent online storage.
 image: /pics/minesweeper.avif
 url: "https://infiniteminesweeper.mou7s.com"
