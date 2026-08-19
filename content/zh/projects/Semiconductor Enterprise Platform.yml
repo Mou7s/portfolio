@@ -2,7 +2,7 @@ title: 半导体企业级数字化综合运营管理平台
 sort: 1
 description: 为半导体制造企业量身打造的一体化全栈数字化运营管理系统，全面覆盖生产、仓储、供应链与日常企业协同。系统深度对接金蝶 K3Cloud ERP（通过 WebAPI 与 SQL Server 直连），打通即时库存联动、单据自动过账审核与动态安全库存预警；涵盖 WMS 智能仓储（扫码拣配/多级库位/物料转换/批次全流程溯源）、MES 制造质量看板（封装与测试直通率千万级工序数据秒级分析）、销售交付流转、企业微信审批推送、车间智能音频播控 (Jukebox) 与考勤访客等综合模块。架构上采用 Nuxt 4 + Nuxt UI 打造现代化交互，通过 Nitro Server 对历史接口实现平滑渐进式迁移，与 Java Spring Boot 后端、Garnet 缓存及多数据库构建高可靠企业底座。
 image: /pics/semiconductor-platform.png
-url: "https://mou7s.com"
+url: "https://ctksys.mou7s.com"
 tags:
   - "Nuxt 4"
   - "Spring Boot"
