@@ -20,6 +20,11 @@ const { data: projects } = await useAsyncData(`projects-${locale.value}`, () => 
 });
 
 const { global } = useAppConfig();
+const colorMode = useColorMode();
+
+// 深色模式优先用 imageDark，没有则回退到 image
+const projectImage = (project: { image: string; imageDark?: string }) =>
+  colorMode.value === "dark" && project.imageDark ? project.imageDark : project.image;
 
 useSeoMeta({
   title: page.value?.seo?.title || page.value?.title,
@@ -86,7 +91,7 @@ useSeoMeta({
           </template>
           <div class="w-full overflow-hidden rounded-lg aspect-[16/9]">
             <img
-              :src="project.image"
+              :src="projectImage(project)"
               :alt="project.title"
               class="size-full object-contain"
             />

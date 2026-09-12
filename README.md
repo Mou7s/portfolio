@@ -19,7 +19,7 @@
 - nuxt-og-image
 - motion-v
 - TypeScript
-- pnpm
+- bun
 
 ## 页面与路由
 
@@ -55,11 +55,11 @@ nuxt.config.ts         Nuxt 配置
 
 ## 本地开发
 
-使用 pnpm 安装依赖并启动开发服务器：
+使用 bun 安装依赖并启动开发服务器：
 
 ```bash
-pnpm install
-pnpm dev
+bun install
+bun run dev
 ```
 
 开发服务器默认由 Nuxt 输出本地访问地址。
@@ -83,16 +83,16 @@ NUXT_PUBLIC_SITE_URL=
 ## 构建与检查
 
 ```bash
-pnpm build
-pnpm preview
-pnpm typecheck
+bun run build
+bun run preview
+bun run typecheck
 ```
 
 常用流程：
 
-- 开发时运行 `pnpm dev`
-- 提交前运行 `pnpm typecheck`
-- 发布前运行 `pnpm build`，然后使用 `pnpm preview` 本地预览产物
+- 开发时运行 `bun run dev`
+- 提交前运行 `bun run typecheck`
+- 发布前运行 `bun run build`，然后使用 `bun run preview` 本地预览产物
 
 ## 内容维护
 
@@ -121,18 +121,18 @@ pnpm typecheck
 
 典型流程：
 
-1. `pnpm install`
-2. `pnpm build`
-3. `pnpm wrangler deploy`
+1. `bun install`
+2. `bun run build`
+3. `bunx wrangler deploy`
 
 本地预览 Worker 产物可运行：
 
 ```bash
-pnpm wrangler dev
+bunx wrangler dev
 ```
 
 ## 协作说明
 
 - 开发前先阅读 `AGENTS.md`。
-- 提交前至少执行 `pnpm typecheck`。
+- 提交前至少执行 `bun run typecheck`。
 - 请勿提交临时文件（例如 `#README.md#`、`.DS_Store`）。

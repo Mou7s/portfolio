@@ -16,7 +16,7 @@
 | OG 图片 | nuxt-og-image（zeroRuntime 模式） |
 | 图标 | @iconify-json/lucide, @iconify-json/simple-icons |
 | 部署 | Cloudflare Workers（nitro preset: cloudflare-module） |
-| 包管理 | pnpm |
+| 包管理 | bun |
 
 ## 项目结构
 
@@ -56,11 +56,11 @@
 ## 常用命令
 
 ```bash
-pnpm install      # 安装依赖（自动执行 nuxt prepare）
-pnpm dev          # 启动本地开发服务器（默认 :3000）
-pnpm build        # 构建生产产物（NODE_OPTIONS=--max-old-space-size=8192）
-pnpm preview      # 本地预览生产构建
-pnpm typecheck    # Nuxt + TypeScript 类型检查
+bun install      # 安装依赖（自动执行 nuxt prepare）
+bun dev          # 启动本地开发服务器（默认 :3000）
+bun run build    # 构建生产产物（NODE_OPTIONS=--max-old-space-size=8192）
+bun run preview  # 本地预览生产构建
+bun run typecheck    # Nuxt + TypeScript 类型检查
 ```
 
 ## 内容管理

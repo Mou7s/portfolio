@@ -11,11 +11,6 @@ export const useNavLinks = () => {
       to: localePath("/"),
     },
     {
-      label: t("nav.experience"),
-      icon: "i-lucide-briefcase",
-      to: localePath("/experience"),
-    },
-    {
       label: t("nav.projects"),
       icon: "i-lucide-folder",
       to: localePath("/projects"),

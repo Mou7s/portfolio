@@ -22,14 +22,14 @@ useSeoMeta({
 const navLinks = useNavLinks()
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
-  useAsyncData('navigation', () => {
+  useAsyncData('error-navigation', () => {
     return Promise.all([
       queryCollectionNavigation('blog')
     ])
   }, {
     transform: data => data.flat()
   }),
-  useLazyAsyncData('search', () => {
+  useLazyAsyncData('error-search', () => {
     return Promise.all([
       queryCollectionSearchSections('blog')
     ])
