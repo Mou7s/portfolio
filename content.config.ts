@@ -89,6 +89,7 @@ export default defineContentConfig({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
         image: z.string().nonempty().editor({ input: 'media' }),
+        imageDark: z.string().optional(),
         url: z.string().nonempty(),
         tags: z.array(z.string()),
         sort: z.number().optional()

@@ -45,6 +45,12 @@ export default defineAppConfig({
         target: "_blank",
         "aria-label": "Mou7s on X",
       },
+      {
+        icon: "i-lucide-map-pin",
+        to: "https://www.geoguessr.com/user/64c1e5a188458417f7397328",
+        target: "_blank",
+        "aria-label": "Mou7s on GeoGuessr",
+      },
     ],
   },
 });

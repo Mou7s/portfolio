@@ -61,4 +61,12 @@ export default defineNuxtConfig({
     },
   },
 
+  // dev 用 node preset：cloudflare preset 的 dump 接口在 dev 下读不到数据，
+  // 会导致客户端跳转内容页 404；线上构建仍用 cloudflare-module，不受影响
+  $development: {
+    nitro: {
+      preset: "node",
+    },
+  },
+
 });

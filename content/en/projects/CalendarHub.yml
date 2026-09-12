@@ -1,0 +1,17 @@
+title: CalendarHub
+sort: 2
+description: ICS subscription calendars for SpaceX launches, the F1 schedule, and WTT Series table tennis, all served as RFC 5545 feeds with one-click webcal subscribe. Built with Nuxt 4 and Nuxt Hub on Cloudflare Workers, with KV-backed SWR caching, live countdowns, and a landing page in 7 languages.
+image: /pics/calendarhub-light.png
+imageDark: /pics/calendarhub-dark.png
+url: "https://calendarhub.mou7s.com"
+tags:
+  [
+    "Nuxt 4",
+    "Nuxt Hub",
+    "Cloudflare Workers",
+    "ICS Calendar",
+    "SpaceX",
+    "F1",
+    "WTT",
+    "i18n",
+  ]

@@ -1,7 +1,8 @@
 title: Semiconductor Enterprise Digital Operations & Manufacturing Platform
 sort: 1
 description: An end-to-end full-stack digital operations and manufacturing platform built for semiconductor enterprises, integrating production, warehousing, supply chain, and day-to-day enterprise workflows. Features deep bi-directional integration with Kingdee K3Cloud ERP (via WebAPI and direct SQL Server connectivity) for realtime inventory synchronization, automated document approval/posting, and dynamic safety stock alerts. Encompasses smart WMS warehousing (barcode picking, multi-tier location management, material conversions, full-batch traceability), MES manufacturing quality analytics (sub-second analytics over millions of packaging & testing process records), sales order fulfillment, WeChat Work approval integration, shopfloor smart audio streaming (Jukebox), and digital administration suites. Powered by a modern, fully-unified Nuxt 4 + Nuxt UI + Nitro Server full-stack architecture (TypeScript / Node.js runtime), natively interfacing multiple databases and enterprise APIs with Garnet caching to deliver ultra-low latency and a resilient enterprise foundation.
-image: /pics/semiconductor-platform.png
+image: /pics/ctksys-light.png
+imageDark: /pics/ctksys-dark.png
 url: "https://ctksys.mou7s.com"
 tags:
   - "Nuxt 4"
