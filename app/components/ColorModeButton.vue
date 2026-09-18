@@ -13,8 +13,12 @@ const startViewTransition = (event: MouseEvent) => {
     return
   }
 
-  const x = event.clientX
-  const y = event.clientY
+  // 圆心固定取按钮自身中心：键盘触发（Enter/Space）时 MouseEvent 坐标为 (0, 0)，
+  // 用点击坐标会让扩散圆从视口左上角开始，看起来「焦点没对上按钮」
+  const rect = (event.currentTarget as HTMLElement | null)?.getBoundingClientRect()
+  const x = rect ? rect.left + rect.width / 2 : event.clientX
+  const y = rect ? rect.top + rect.height / 2 : event.clientY
+
   const endRadius = Math.hypot(
     Math.max(x, window.innerWidth - x),
     Math.max(y, window.innerHeight - y)
