@@ -14,15 +14,18 @@ const startViewTransition = (event: MouseEvent) => {
   }
 
   // 圆心固定取按钮自身中心：键盘触发（Enter/Space）时 MouseEvent 坐标为 (0, 0)，
-  // 用点击坐标会让扩散圆从视口左上角开始，看起来「焦点没对上按钮」
+  // 用点击坐标会让扩散圆从视口左上角开始
   const rect = (event.currentTarget as HTMLElement | null)?.getBoundingClientRect()
   const x = rect ? rect.left + rect.width / 2 : event.clientX
   const y = rect ? rect.top + rect.height / 2 : event.clientY
 
-  const endRadius = Math.hypot(
-    Math.max(x, window.innerWidth - x),
-    Math.max(y, window.innerHeight - y)
-  )
+  // 圆心和半径都用百分比，不要用 px：
+  // Chrome 在 devicePixelRatio ≠ 1（HiDPI / Windows 缩放 125%~200%）时，会把
+  // ::view-transition-new(root) 上 clip-path 的 px 当成设备像素解释，圆心会被整体
+  // 缩到 1/dpr 处，表现为圆从按钮左上方冒出来。百分比是相对伪元素盒子的比例，
+  // 与坐标系单位无关，任何缩放比下都落在按钮上。
+  const xPercent = (x / window.innerWidth) * 100
+  const yPercent = (y / window.innerHeight) * 100
 
   const transition = document.startViewTransition(() => {
     switchTheme()
@@ -30,13 +33,12 @@ const startViewTransition = (event: MouseEvent) => {
 
   transition.ready.then(() => {
     const duration = 600
+    const clipPath = [
+      `circle(0% at ${xPercent}% ${yPercent}%)`,
+      `circle(150% at ${xPercent}% ${yPercent}%)`
+    ]
     document.documentElement.animate(
-      {
-        clipPath: [
-          `circle(0px at ${x}px ${y}px)`,
-          `circle(${endRadius}px at ${x}px ${y}px)`
-        ]
-      },
+      { clipPath },
       {
         duration: duration,
         easing: 'cubic-bezier(.76,.32,.29,.99)',
