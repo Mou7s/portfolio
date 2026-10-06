@@ -1,2 +1,2 @@
-[install]
-trustedDependencies = ["better-sqlite3", "sharp"]
+[run]
+bun = true

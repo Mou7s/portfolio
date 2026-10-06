@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Optogenetics: light and neural activity</title><desc id="desc">A conceptual illustration of light reaching a neuron. Not an anatomical diagram.</desc>
+<defs><radialGradient id="bg"><stop stop-color="#183954"/><stop offset="1" stop-color="#071421"/></radialGradient><linearGradient id="beam" x2="0" y2="1"><stop stop-color="#67e8f9" stop-opacity=".75"/><stop offset="1" stop-color="#67e8f9" stop-opacity="0"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<path d="M780 85L650 380H910Z" fill="url(#beam)"/>
+<g stroke="#67e8f9" stroke-width="7" fill="none" stroke-linecap="round"><path d="M780 370L680 295L615 310M680 295L665 235M780 370L870 300L940 305M870 300L890 235M780 370L680 430L610 420M780 370L870 440L940 420M780 390V490L830 545M780 490L730 545"/></g>
+<circle cx="780" cy="370" r="47" fill="#164e63" stroke="#a5f3fc" stroke-width="7"/><circle cx="780" cy="370" r="17" fill="#a5f3fc"/>
+<g font-family="system-ui,sans-serif" fill="#f0f9ff"><text x="80" y="150" font-size="22" letter-spacing="4">NOBEL PRIZE · 2026</text><text x="80" y="270" font-size="64" font-weight="700">Light.</text><text x="80" y="350" font-size="64" font-weight="700">Neurons.</text><text x="80" y="430" font-size="64" font-weight="700">Causality.</text><text x="80" y="530" font-size="25" fill="#a5c5d9">Understanding optogenetics</text></g>
+</svg>
