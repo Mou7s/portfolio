@@ -3,28 +3,28 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "NODE_OPTIONS=--max-old-space-size=8192 nuxt build",
-    "dev": "nuxt dev",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "typecheck": "nuxt typecheck"
+    "build": "bun --bun run nuxt build",
+    "dev": "bun --bun run nuxt dev",
+    "preview": "bun --bun run nuxt preview",
+    "postinstall": "bun --bun run nuxt prepare",
+    "typecheck": "bun --bun run nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.131",
-    "@iconify-json/simple-icons": "^1.2.95",
-    "@nuxt/content": "^3.16.0",
-    "@nuxt/ui": "^4.11.1",
+    "@iconify-json/lucide": "^1.2.140",
+    "@iconify-json/simple-icons": "^1.2.99",
+    "@nuxt/content": "^3.16.1",
+    "@nuxt/ui": "^4.11.3",
     "@nuxtjs/i18n": "^10.6.0",
     "better-sqlite3": "^12.11.1",
-    "motion-v": "^2.4.2",
-    "nuxt": "^4.5.2",
-    "nuxt-og-image": "^6.7.8",
+    "motion-v": "^2.6.0",
+    "nuxt": "^4.6.0",
+    "nuxt-og-image": "^6.10.3",
     "yaml": "^2.9.1"
   },
   "devDependencies": {
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.3.11",
-    "wrangler": "^4.131.1"
+    "vue-tsc": "^3.3.12",
+    "wrangler": "^4.147.0"
   },
   "packageManager": "bun@1.4.0"
 }
