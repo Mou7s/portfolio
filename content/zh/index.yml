@@ -27,7 +27,7 @@ skills:
     - name: "网络与运维"
       items: ["Linux / 服务部署", "ERP 定制与开发", "系统与硬件排障"]
     - name: "设计与媒体"
-      items: ["平面设计 (Ps/Ai)", "视频拍摄剪辑", "印前设计"]
+      items: ["平面设计 (Ps/Ai)", "视频拍摄剪辑"]
 
 experience:
   title: 工作经历

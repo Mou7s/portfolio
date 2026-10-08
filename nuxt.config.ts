@@ -59,6 +59,12 @@ export default defineNuxtConfig({
   // Nitro 服务器引擎配置
   nitro: {
     preset: "cloudflare-module",
+    // Nuxt 4.6.0 在 Windows 上会因路径分隔符导致 renderer 被错误地
+    // externalize，运行时只能读到空的 manifest/precomputed 占位模块。
+    // 使用跨平台正则强制内联；上游修复：https://github.com/nuxt/nuxt/issues/36467
+    externals: {
+      inline: [/[\\/]node_modules[\\/]nuxt[\\/]dist[\\/]/],
+    },
     serverAssets: [
       {
         baseName: "content",
