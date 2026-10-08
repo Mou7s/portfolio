@@ -40,8 +40,21 @@ export default defineNuxtConfig({
     zeroRuntime: true, // 零运行时模式，减少打包体积
   },
 
+  content: {
+    build: {
+      markdown: {
+        remarkPlugins: {
+          "remark-math": { options: { singleDollarTextMath: false } },
+        },
+        rehypePlugins: {
+          "rehype-katex": {},
+        },
+      },
+    },
+  },
+
   // 全局 CSS 文件
-  css: ["~/assets/css/main.css"],
+  css: ["katex/dist/katex.min.css", "~/assets/css/main.css"],
 
   // 兼容性日期，用于启用特定日期前的功能
   compatibilityDate: "2026-06-14",
