@@ -31,9 +31,9 @@ This is why chemists care not only about making the right molecular formula, but
 
 The balance is commonly expressed as **enantiomeric excess**, or ee:
 
-\[
+$$
 ee = \frac{|R-S|}{R+S} \times 100\%
-\]
+$$
 
 If a sample contains 50% R and 50% S, its ee is 0%. A mixture containing 60% R and 40% S has 20% ee. A 99:1 mixture has 98% ee.
 
