@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Economics: expectations and stability</title>
+  <desc id="desc">An economic cycle settles into a smoother wave, surrounded by interconnected households, firms and monetary policy.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b162b"/><stop offset="1" stop-color="#183e47"/></linearGradient>
+    <linearGradient id="wave"><stop stop-color="#f6c977"/><stop offset="1" stop-color="#6ce3cb"/></linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1330" cy="190" r="270" fill="#6ce3cb" opacity=".035"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="110" y="130" fill="#f6c977" font-size="24" letter-spacing="5">ECONOMIC SCIENCES · 2026</text>
+    <text x="110" y="225" fill="#f4f6fa" font-size="76" font-weight="700">Expectations shape</text>
+    <text x="110" y="318" fill="#f4f6fa" font-size="76" font-weight="700">the economy.</text>
+    <text x="114" y="378" fill="#a6bdca" font-size="27">Robert E. Hall  /  Michael Woodford</text>
+    <path d="M110 570H1490" stroke="#8aa7b7" stroke-opacity=".3" stroke-dasharray="6 10"/>
+    <path d="M110 570C175 570 190 410 260 410S335 730 405 730S480 455 550 455S625 655 695 655S770 515 840 515S915 610 985 610S1060 545 1130 545S1205 588 1275 588S1390 565 1490 570" fill="none" stroke="url(#wave)" stroke-width="8" stroke-linecap="round"/>
+    <g fill="#102c3b" stroke="#7cafa9" stroke-width="2">
+      <rect x="110" y="775" width="300" height="65" rx="32"/>
+      <rect x="650" y="775" width="300" height="65" rx="32"/>
+      <rect x="1190" y="775" width="300" height="65" rx="32"/>
+    </g>
+    <g stroke="#7cafa9" stroke-opacity=".55" stroke-width="2"><path d="M410 807H650M950 807H1190"/><path d="m632 799 18 8-18 8m540-16 18 8-18 8" fill="none"/></g>
+    <g fill="#d6e7eb" font-size="22" text-anchor="middle"><text x="260" y="815">HOUSEHOLDS</text><text x="800" y="815">FIRMS</text><text x="1340" y="815">MONETARY POLICY</text></g>
+  </g>
+</svg>

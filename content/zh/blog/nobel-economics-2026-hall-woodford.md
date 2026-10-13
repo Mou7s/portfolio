@@ -3,6 +3,7 @@ title: 2026 诺贝尔经济学奖：理解现代经济这台复杂机器
 
 description: 从消费、预期到央行政策，理解 Robert Hall 与 Michael Woodford 的研究如何影响现代宏观经济学，以及为什么经济学开始像控制复杂系统一样研究世界。
 date: 2026-10-13
+image: /blog/nobel-economics-2026-hall-woodford.svg
 minRead: 12
 author:
   name: mou7s
