@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const navLinks = useNavLinks();
-const { locale } = useI18n();
 
 // 获取当前的颜色模式（亮色或暗色）
 const colorMode = useColorMode();
@@ -28,30 +26,6 @@ useSeoMeta({
   twitterCard: "summary_large_image",
 });
 
-// 并行获取博客导航和搜索文件，提高首屏速度
-const [{ data: navigation }, { data: files }] = await Promise.all([
-  useAsyncData(
-    "navigation",
-    () => {
-      // 获取博客内容集合的导航结构
-      return Promise.all([queryCollectionNavigation("blog")]);
-    },
-    {
-      transform: (data) => data.flat(),
-    },
-  ),
-  useLazyAsyncData(
-    "search",
-    () => {
-      // 获取博客集合的可搜索内容
-      return Promise.all([queryCollectionSearchSections("blog")]);
-    },
-    {
-      server: false,
-      transform: (data) => data.flat(),
-    },
-  ),
-]);
 </script>
 
 <template>
@@ -61,15 +35,5 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
         <NuxtPage />
       </UMain>
     </NuxtLayout>
-
-    <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        :navigation="navigation"
-        shortcut="meta_k"
-        :links="navLinks"
-        :fuse="{ resultLimit: 42 }"
-      />
-    </ClientOnly>
   </UApp>
 </template>

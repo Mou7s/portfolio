@@ -1,8 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "projects": "Projects",
-    "blog": "Blog"
+    "projects": "Projects"
   },
   "hero": {
     "open_to_opportunities": "Open to opportunities",
@@ -13,12 +12,6 @@
   },
   "footer": {
     "credits": "Built with Nuxt UI • © {year}"
-  },
-  "blog": {
-    "copy_link": "Copy link",
-    "link_copied": "Article link copied to clipboard",
-    "min_read": "{minutes} MIN READ",
-    "back_to_blog": "Blog"
   },
   "projects": {
     "view_project": "View Project"

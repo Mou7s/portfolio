@@ -61,9 +61,6 @@ experience:
         url: "https://www.ford.com.cn"
         color: "#47a8e5"
 
-blog:
-  title: "最新文章"
-  description: "记录我的技术思考与日常分享"
 faq:
   title: 常见问题解答
   description: 快速了解关于我的常见问题。

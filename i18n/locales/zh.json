@@ -1,8 +1,7 @@
 {
   "nav": {
     "home": "首页",
-    "projects": "项目",
-    "blog": "博客"
+    "projects": "项目"
   },
   "hero": {
     "open_to_opportunities": "接受合作与工作机会",
@@ -13,12 +12,6 @@
   },
   "footer": {
     "credits": "基于 Nuxt UI 构建 • © {year}"
-  },
-  "blog": {
-    "copy_link": "复制链接",
-    "link_copied": "文章链接已成功复制到剪贴板",
-    "min_read": "阅读时间 {minutes} 分钟",
-    "back_to_blog": "返回博客"
   },
   "projects": {
     "view_project": "查看项目"

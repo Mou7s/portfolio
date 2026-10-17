@@ -23,7 +23,6 @@ useSeoMeta({
   <UPage v-if="page">
     <LandingHero :page />
     <LandingSkills :page />
-    <LandingBlog :page />
     <LandingTestimonials :page />
   </UPage>
 </template>
