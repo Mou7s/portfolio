@@ -85,7 +85,7 @@ export default defineNuxtConfig({
       },
     ],
     prerender: {
-      routes: ["/", "/zh", "/ppi", "/rss.xml", "/zh/rss.xml"], // 预渲染的路由
+      routes: ["/", "/zh", "/ppi"], // 预渲染的路由
       crawlLinks: true, // 爬取链接以发现更多路由
     },
   },

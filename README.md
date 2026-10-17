@@ -26,8 +26,6 @@
 - `/` 首页，聚合 Hero、简介、经历、博客、评价与 FAQ
 - `/experience` 工作经历
 - `/projects` 项目展示
-- `/blog` 博客列表
-- `/blog/[...slug]` 博客详情
 - `/speaking` 演讲/活动页
 - `/ppi` PPI 计算器
 
@@ -46,7 +44,6 @@ content/
   en/                  英文内容
   zh/                  中文内容
   */*.yml              页面配置与结构化内容
-  */blog/*.md          博客文章
   */projects/*.yml     项目条目
 public/                静态资源
 content.config.ts      Nuxt Content collection schema
@@ -100,8 +97,6 @@ bun run typecheck
 - 经历页内容：`content/en/experience.yml`、`content/zh/experience.yml`
 - 项目页头部配置：`content/en/projects.yml`、`content/zh/projects.yml`
 - 项目条目：`content/en/projects/*.yml`、`content/zh/projects/*.yml`
-- 博客页头部配置：`content/en/blog.yml`、`content/zh/blog.yml`
-- 博客文章：`content/en/blog/*.md`、`content/zh/blog/*.md`
 - 演讲/活动内容：`content/en/speaking.yml`、`content/zh/speaking.yml`
 
 新增内容前请确认字段满足 `content.config.ts` 中的 schema 定义。

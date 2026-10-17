@@ -31,7 +31,7 @@
 │   ├── composables/         # 组合式函数（useNavLinks）
 │   ├── layouts/default.vue  # 全局布局
 │   ├── middleware/           # 路由中间件（zh-root.global.ts）
-│   ├── pages/               # 路由页面（index, projects, experience, speaking, ppi, blog/*）
+│   ├── pages/               # 路由页面（index, projects, experience, speaking, ppi）
 │   └── utils/               # 工具函数（clipboard, links）
 ├── content/                 # 双语内容
 │   ├── en/                  # 英文（默认语言）
@@ -39,16 +39,12 @@
 │   │   ├── projects.yml     # 项目页元信息
 │   │   ├── experience.yml   # 经历页
 │   │   ├── speaking.yml     # 演讲页
-│   │   ├── blog.yml         # 博客页元信息
 │   │   ├── projects/        # 项目详情 .yml 文件
-│   │   └── blog/            # 博客文章 .md 文件
 │   └── zh/                  # 简体中文（与 en 结构镜像）
 ├── content.config.ts        # Content collections schema（6 个 collection）
 ├── i18n/locales/            # 国际化翻译文件（en.json, zh.json）
 ├── nuxt.config.ts           # Nuxt 全局配置
 ├── server/                  # 服务端路由
-│   ├── routes/rss.xml.ts    # RSS 生成
-│   └── utils/rss.ts         # RSS 工具函数
 ├── public/                  # 静态资源（原样暴露：favicon, hero 图片, robots.txt, _redirects）
 └── tsconfig.json            # TypeScript 配置
 ```
@@ -74,14 +70,13 @@ bun run typecheck    # Nuxt + TypeScript 类型检查
 
 ### Content Collections
 
-定义在 `content.config.ts`，共 6 个 collection：
+定义在 `content.config.ts`，共 5 个 collection：
 
 | Collection | 来源 | 用途 |
 |---|---|---|
-| `index` | `**/index.yml` | 首页：hero、about、skills、experience、testimonials、blog、faq |
+| `index` | `**/index.yml` | 首页：hero、about、skills、experience、testimonials、faq |
 | `projects` | `**/projects/*.yml` | 项目卡片：title、description、image、tags、url、sort |
-| `blog` | `**/blog/*.md` | 博客文章：title、description、minRead、date、image、author |
-| `pages` | `**/projects.yml`, `**/blog.yml` | 列表页元信息：links（按钮配置） |
+| `pages` | `**/projects.yml` | 列表页元信息：links（按钮配置） |
 | `experience` | `**/experience.yml` | 职业经历：company、role、period、highlights、stack |
 | `speaking` | `**/speaking.yml` | 演讲活动：category、title、date、location、url |
 
@@ -106,7 +101,7 @@ bun run typecheck    # Nuxt + TypeScript 类型检查
 ### nuxt.config.ts 关键配置
 
 - **Nitro preset**: `cloudflare-module`，部署到 Cloudflare Workers。
-- **预渲染路由**: `/`、`/ppi`、`/rss.xml`、`/zh/rss.xml`（启用 `crawlLinks` 爬取更多路由）。
+- **预渲染路由**: `/`、`/ppi`（启用 `crawlLinks` 爬取更多路由）。
 - **OG 图片**: `zeroRuntime: true`，减少构建产物体积。
 - **DevTools**: 默认启用（快捷键 Shift + Option + D）。
 - **构建内存**: `NODE_OPTIONS=--max-old-space-size=8192`（避免内存溢出）。
