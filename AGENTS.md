@@ -13,7 +13,7 @@
 | 内容 | Nuxt Content v3（支持 .md / .yml frontmatter） |
 | 国际化 | @nuxtjs/i18n（策略：prefix_except_default） |
 | 动画 | motion-v |
-| OG 图片 | nuxt-og-image（zeroRuntime 模式） |
+| OG 图片 | nuxt-og-image v7（zeroRuntime 模式，takumi 渲染） |
 | 图标 | @iconify-json/lucide, @iconify-json/simple-icons |
 | 部署 | Cloudflare Workers（nitro preset: cloudflare-module） |
 | 包管理 | bun |
@@ -102,7 +102,8 @@ bun run typecheck    # Nuxt + TypeScript 类型检查
 
 - **Nitro preset**: `cloudflare-module`，部署到 Cloudflare Workers。
 - **预渲染路由**: `/`、`/ppi`（启用 `crawlLinks` 爬取更多路由）。
-- **OG 图片**: `zeroRuntime: true`，减少构建产物体积。
+- **OG 图片**: `zeroRuntime: true`，减少构建产物体积；渲染器使用 takumi（`@takumi-rs/core`）。
+- **Bun 兼容垫片**: `bunfig.toml` 顶层 `preload` 注入 `scripts/bun-find-package-json.ts`。nuxt-og-image v7 在 setup 阶段调用 `node:module` 的 `findPackageJSON()`（Node 22.14+ 新增 API），而 Bun 尚未实现该 API；缺少垫片时 `bun install` / `bun dev` / `bun run build` 会在启动阶段报 `findPackageJSON is not a function`。Bun 实现该 API 后可删除垫片。
 - **DevTools**: 默认启用（快捷键 Shift + Option + D）。
 - **构建内存**: `NODE_OPTIONS=--max-old-space-size=8192`（避免内存溢出）。
 

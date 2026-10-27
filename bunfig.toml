@@ -1,2 +1,4 @@
+preload = ["./scripts/bun-find-package-json.ts"]
+
 [run]
 bun = true
