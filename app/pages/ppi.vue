@@ -48,7 +48,7 @@ useHead(() => ({
     {
       key: 'ppi-ld-json',
       type: 'application/ld+json',
-      children: JSON.stringify(structuredData.value)
+      innerHTML: JSON.stringify(structuredData.value)
     }
   ]
 }))

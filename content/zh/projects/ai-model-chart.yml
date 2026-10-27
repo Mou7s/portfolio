@@ -1,0 +1,14 @@
+title: AI 模型三维对比图
+sort: 3
+description: 基于 Artificial Analysis 数据，从智能水平、单任务成本与单任务耗时三个维度探索 AI 模型的交互式可视化工具。支持旋转缩放、三组指标平面视图切换、按模型或厂商搜索，以及围绕选中模型定位和缩放；隐藏的模型跨浏览器会话保留，缺失指标明确显示为不可用。采用 Nuxt 4、Vue 3 与 Plotly 构建，通过 Cloudflare Workers 和 KV 每六小时刷新数据，更新失败时保留最近一次成功快照。
+image: /pics/ai-model-chart.png
+imageDark: /pics/ai-model-chart-dark.png
+url: "https://ai.mou7s.com"
+tags:
+  - "Nuxt 4"
+  - "Vue 3"
+  - "Plotly"
+  - "三维可视化"
+  - "AI 模型评测"
+  - "Cloudflare Workers"
+  - "Workers KV"

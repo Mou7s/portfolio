@@ -8,6 +8,7 @@ export default defineNuxtConfig({
 
   // 使用的 Nuxt 模块
   modules: [
+    "@nuxt/eslint",
     "@nuxt/ui", // UI 组件库
     "@nuxt/content", // 内容管理系统
     "motion-v/nuxt", // 动画库
@@ -41,6 +42,9 @@ export default defineNuxtConfig({
   },
 
   content: {
+    experimental: {
+      sqliteConnector: "bun",
+    },
     build: {
       markdown: {
         remarkPlugins: {
@@ -57,12 +61,17 @@ export default defineNuxtConfig({
   css: ["katex/dist/katex.min.css", "~/assets/css/main.css"],
 
   // 兼容性日期，用于启用特定日期前的功能
-  compatibilityDate: "2026-06-14",
+  compatibilityDate: "2026-06-30",
+
+  prerender: {
+    routes: ["/", "/zh", "/ppi"],
+    crawlLinks: true,
+  },
 
   hooks: {
     "nitro:init"(nitro) {
       // Content 的本地 SQLite 仅用于开发与预渲染；Workers 使用 D1。
-      // 避免 Bun 构建时把本地连接器的 bun:sqlite 导入带入 Workers。
+      // 避免本地 SQLite 连接器的 Node/Bun 原生导入带入 Workers。
       if (nitro.options.preset === "cloudflare-module") {
         nitro.options.alias["#content/local-adapter"] = "db0/connectors/cloudflare-d1";
       }
@@ -84,10 +93,6 @@ export default defineNuxtConfig({
         dir: "../content",
       },
     ],
-    prerender: {
-      routes: ["/", "/zh", "/ppi"], // 预渲染的路由
-      crawlLinks: true, // 爬取链接以发现更多路由
-    },
   },
 
   // dev 使用 Node 兼容的输出，由 package.json 中的 Bun 命令运行；

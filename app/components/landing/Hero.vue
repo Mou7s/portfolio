@@ -63,7 +63,7 @@ defineProps<{
       </Motion>
     </template>
 
-    <template #description v-if="page.description">
+    <template v-if="page.description" #description>
       <Motion
         :initial="{
           scale: 1.1,
@@ -188,7 +188,7 @@ defineProps<{
           v-bind="img"
           loading="lazy"
           decoding="async"
-        />
+        >
       </Motion>
     </UMarquee>
   </UPageHero>
