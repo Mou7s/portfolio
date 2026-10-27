@@ -17,7 +17,7 @@ const handleToggle = (lang: 'en' | 'zh') => {
     >
       <!-- 果冻感背景动画滑块 -->
       <div 
-        class="absolute top-[2px] bottom-[2px] rounded-full bg-background dark:bg-neutral-800 shadow-sm border border-default/30 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+        class="absolute top-[2px] bottom-[2px] rounded-full bg-default dark:bg-neutral-800 shadow-sm border border-default/30 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
         :class="isZh ? 'left-[calc(50%+1px)] w-[calc(50%-3px)]' : 'left-[2px] w-[calc(50%-3px)]'"
       />
       

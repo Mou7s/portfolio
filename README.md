@@ -52,6 +52,8 @@ nuxt.config.ts         Nuxt 配置
 
 ## 本地开发
 
+使用 Bun 安装依赖并运行 Nuxt。OG Image 固定为 6.10.3：v7 使用当前 Bun 尚未支持的 `node:module.findPackageJSON`，暂不升级。TypeScript 使用与 vue-tsc 兼容的 6.x。
+
 使用 bun 安装依赖并启动开发服务器：
 
 ```bash
@@ -83,6 +85,7 @@ NUXT_PUBLIC_SITE_URL=
 bun run build
 bun run preview
 bun run typecheck
+bun run lint
 ```
 
 常用流程：
@@ -92,6 +95,14 @@ bun run typecheck
 - 发布前运行 `bun run build`，然后使用 `bun run preview` 本地预览产物
 
 ## 内容维护
+
+### 上游模板同步
+
+2026-10-27 对照 `nuxt-ui-templates/portfolio` 的 `350bea0` 同步：错误页使用 UApp、移除重复的 Twitter 图片标签、Bun SQLite 连接器（按当前运行环境适配上游原生连接器改动）、顶层预渲染配置、兼容日期 2026-06-30，以及 ESLint/Tailwind 正确性检查。保留双语内容、PPI、Bun 包管理和 Cloudflare D1 适配。
+
+OG Image 保留在 6.10.3，以支持 Bun 运行。`find-up` 暂时固定为 7.0.0，以规避 8.0.0 从 `unicorn-magic` 错误入口导入 `toPath` 导致 Nuxt ESLint 模块加载失败。
+
+上游尾斜杠缓存键修复不适用于当前按语言生成的固定缓存键；博客布局、阅读时间、pnpm 和 GitHub Actions 配置不适用于当前项目。
 
 - 首页内容：`content/en/index.yml`、`content/zh/index.yml`
 - 经历页内容：`content/en/experience.yml`、`content/zh/experience.yml`

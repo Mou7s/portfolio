@@ -108,7 +108,7 @@ bun run typecheck    # Nuxt + TypeScript 类型检查
 
 ### 新增关键页面时
 
-同步更新 `nuxt.config.ts` 中 `nitro.prerender.routes`。
+同步更新 `nuxt.config.ts` 中顶层 `prerender.routes`。
 
 ## 代码规范
 

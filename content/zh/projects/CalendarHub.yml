@@ -1,17 +1,19 @@
 title: CalendarHub
 sort: 2
-description: 覆盖 SpaceX 发射、F1 赛程与 WTT 系列乒乓球赛的 ICS 订阅日历，均按 RFC 5545 标准输出，支持 webcal 一键订阅。基于 Nuxt 4 与 Nuxt Hub 构建，跑在 Cloudflare Workers 上，KV 做 SWR 缓存，带实时倒计时与 7 语种订阅落地页。
+description: 聚合 SpaceX 发射、F1 各阶段赛程、WTT 乒乓球与 Dota 2 赛事的多语言日历。支持日、周及无限滚动月视图，可按图层筛选、搜索日程，查看事件详情与已公布赛果；通过符合 RFC 5545 的 ICS 订阅源和 webcal 一键订阅，将日程接入 Apple 日历、Google 日历与 Outlook。界面提供七种语言、浅深色主题、本地时区显示，以及中文农历与节气。基于 Nuxt 4、Nuxt UI、TypeScript 和 Cloudflare Workers 构建，使用 NuxtHub KV 缓存，并对各上游数据源独立加载与降级，单个来源异常时仍可浏览其他日历。
 image: /pics/calendarhub-light.png
 imageDark: /pics/calendarhub-dark.png
 url: "https://calendarhub.mou7s.com"
 tags:
   [
     "Nuxt 4",
-    "Nuxt Hub",
+    "Nuxt UI",
+    "NuxtHub KV",
     "Cloudflare Workers",
     "ICS 订阅",
     "SpaceX",
     "F1",
+    "Dota 2",
     "WTT 乒乓球",
     "多语言",
   ]

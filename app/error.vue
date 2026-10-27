@@ -24,7 +24,7 @@ const navLinks = useNavLinks()
 </script>
 
 <template>
-  <div>
+  <UApp>
     <AppHeader :links="navLinks" />
 
     <UMain>
@@ -37,6 +37,5 @@ const navLinks = useNavLinks()
 
     <AppFooter />
 
-    <UToaster />
-  </div>
+  </UApp>
 </template>

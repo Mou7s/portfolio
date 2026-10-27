@@ -75,8 +75,7 @@ useSeoMeta({
             wrapper: 'max-sm:order-last',
           }"
         >
-          <template #leading>
-          </template>
+          <template #leading/>
           <template v-if="project.url" #footer>
             <ULink
               :to="project.url"
@@ -94,7 +93,7 @@ useSeoMeta({
               :src="projectImage(project)"
               :alt="project.title"
               class="size-full object-contain"
-            />
+            >
           </div>
         </UPageCard>
       </Motion>
