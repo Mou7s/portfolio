@@ -1,14 +1,14 @@
-title: AI Model 3D Chart
-sort: 3
-description: An interactive 3D explorer for comparing AI models by Intelligence Index, cost per task and time per task, using data from Artificial Analysis. Rotate and zoom the chart, switch between three metric-pair views, search by model or provider, and anchor navigation to a selected model. Hidden models persist across browser sessions, while missing metrics remain explicitly unavailable. Built with Nuxt 4, Vue 3 and Plotly, with Cloudflare Workers and KV refreshing the data every six hours and retaining the last successful snapshot if an update fails.
+title: "ai · 3D AI Model Atlas"
+sort: 4
+description: "An interactive 3D and 2D model explorer comparing Artificial Analysis benchmarks across Intelligence Index, cost per task, and time per task. Supports anchored scroll zoom, Pareto frontier filtering (P), open-weights/proprietary toggling (W), persistent hidden models, URL state sync, and a / search palette connected to Cloudflare Workers AI streaming chat with clickable model pills. Refreshes every six hours into Workers KV."
 image: /pics/ai-model-chart.png
 imageDark: /pics/ai-model-chart-dark.png
 url: "https://ai.mou7s.com"
+repo: "https://github.com/Mou7s/ai"
 tags:
   - "Nuxt 4"
-  - "Vue 3"
-  - "Plotly"
-  - "3D Visualization"
-  - "AI Benchmarks"
-  - "Cloudflare Workers"
+  - "Plotly 3D"
+  - "Workers AI (SSE)"
+  - "Pareto Filter"
   - "Workers KV"
+  - "Cron"

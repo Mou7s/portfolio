@@ -1,0 +1,14 @@
+title: "Minesweeper · Daily Challenge & Multiplayer Arena"
+sort: 5
+description: "A daily-challenge and multiplayer Minesweeper arena built with Nuxt 4, Canvas 2D, Nitro WebSockets, Cloudflare Durable Objects, and Drizzle on D1. Features a shared daily 16×16 UTC board and leaderboard, real-time 1v1 or 2–8 player rooms, and shareable async challenge links. Every match is verified server-side from recorded action logs—never trusting client-submitted times or seeds."
+image: /pics/minesweeper-light.png
+imageDark: /pics/minesweeper-dark.png
+url: "https://minesweeper.mou7s.com"
+repo: "https://github.com/Mou7s/minesweeper"
+tags:
+  - "Nuxt 4"
+  - "Canvas 2D"
+  - "WebSocket"
+  - "Durable Objects"
+  - "Drizzle & D1"
+  - "Server Replay"

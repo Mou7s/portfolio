@@ -4,36 +4,15 @@
     "projects": "项目"
   },
   "hero": {
-    "open_to_opportunities": "接受合作与工作机会",
-    "open_to_remote": "接受远程工作机会",
-    "open_to_onsite": "接受现场工作机会",
-    "open_to_hybrid": "接受混合办公机会",
-    "not_actively_looking": "暂不考虑新机会"
+    "available": "可承接新项目",
+    "unavailable": "暂不承接新项目"
   },
   "footer": {
     "credits": "基于 Nuxt UI 构建 • © {year}"
   },
   "projects": {
-    "view_project": "查看项目"
-  },
-  "speaking": {
-    "listen": "听音频",
-    "watch": "看视频",
-    "category": {
-      "Conference": "峰会/会议",
-      "Live talk": "现场演讲",
-      "Podcast": "播客节目"
-    }
-  },
-  "ppi": {
-    "title": "PPI 计算器",
-    "description": "免费的在线 PPI 计算器。只需输入您的屏幕分辨率和屏幕尺寸，即可立即计算出像素密度（每英寸像素数）。",
-    "width": "宽度 (像素)",
-    "height": "高度 (像素)",
-    "size": "屏幕尺寸 (英寸)",
-    "size_placeholder": "例如: 6.7, 13.3, 27",
-    "resolution": "当前分辨率",
-    "diagonal": "对角线像素",
-    "display_ppi": "显示器 PPI"
+    "view_project": "查看项目",
+    "live_demo": "在线访问",
+    "source_code": "GitHub 源码"
   }
 }

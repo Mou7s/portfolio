@@ -64,7 +64,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2026-06-30",
 
   prerender: {
-    routes: ["/", "/zh", "/ppi"],
+    routes: ["/", "/zh"],
     crawlLinks: true,
   },
 

@@ -1,0 +1,14 @@
+title: "Minesweeper · 每日挑战与多人实时扫雷"
+sort: 5
+description: "基于 Nuxt 4、Canvas 2D、Nitro WebSocket 与 Cloudflare Durable Objects 构建的扫雷竞技场。支持 UTC 每日统一种子 16×16 棋盘排行、1v1 与 2–8 人实时对战房间以及永久有效的异步挑战链接；采用 HS256 JWT + scrypt 认证与 Drizzle/D1 存储，所有成绩均由服务端根据完整操作日志回放结算，杜绝客户端篡改。"
+image: /pics/minesweeper-light.png
+imageDark: /pics/minesweeper-dark.png
+url: "https://minesweeper.mou7s.com"
+repo: "https://github.com/Mou7s/minesweeper"
+tags:
+  - "Nuxt 4"
+  - "Canvas 2D"
+  - "WebSocket"
+  - "Durable Objects"
+  - "Drizzle & D1"
+  - "服务端结算"

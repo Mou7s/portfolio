@@ -1,0 +1,14 @@
+title: "CalendarHub · Multi-Topic ICS Subscription Hub"
+sort: 3
+description: "A read-only calendar aggregator turning SpaceX launches, Formula 1 sessions, WTT table tennis matches, and Dota 2 fixtures into standard RFC 5545 ICS and one-click webcal subscriptions for Apple Calendar, Google Calendar, and Outlook. Features day, week, and virtualized infinite-scroll month views across seven locales with 1900–2100 Chinese lunar dates, solar terms, and Cloudflare Workers KV caching with hourly Cron sync."
+image: /pics/calendarhub-light.png
+imageDark: /pics/calendarhub-dark.png
+url: "https://calendarhub.mou7s.com"
+repo: "https://github.com/Mou7s/calendar-hub"
+tags:
+  - "Nuxt 4"
+  - "Nuxt UI"
+  - "Cloudflare Workers"
+  - "RFC 5545 / Webcal"
+  - "KV Cache"
+  - "7 Locales"

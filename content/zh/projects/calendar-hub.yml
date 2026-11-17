@@ -1,0 +1,14 @@
+title: "CalendarHub · 多主题日历订阅中心"
+sort: 3
+description: "将 SpaceX 发射、F1 赛事、WTT 乒乓球与 Dota 2 赛程转化为标准 RFC 5545 ICS 与一键 webcal 订阅源的边缘聚合平台，可无缝订阅至 Apple 日历、Google 日历与 Outlook。提供七国语言界面、日/周/虚拟化无限滚动月视图及 1900–2100 年农历与节气，基于 Nuxt 4、Cloudflare Workers、KV 缓存与每小时 Cron 同步构建，并对上游数据源独立容错降级。"
+image: /pics/calendarhub-light.png
+imageDark: /pics/calendarhub-dark.png
+url: "https://calendarhub.mou7s.com"
+repo: "https://github.com/Mou7s/calendar-hub"
+tags:
+  - "Nuxt 4"
+  - "Nuxt UI"
+  - "Cloudflare Workers"
+  - "RFC 5545 / Webcal"
+  - "KV Cache"
+  - "7 国语言"

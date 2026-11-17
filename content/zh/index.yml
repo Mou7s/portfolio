@@ -1,88 +1,85 @@
 seo:
-  title: "mou7s - 全栈工程师"
-  description: "欢迎来到我的作品集！我是 mou7s，一名坐标东莞的全栈工程师。我专注于打造兼具视觉美感与卓越功能的数字化体验。"
+  title: "mou7s — 全栈与边缘计算工程师"
+  description: "专注 Bun、Nuxt 4 与 Cloudflare 边缘架构的全栈工程师，持续构建开源企业数字化系统与低延迟边缘原生产品。"
 title: "mou7s"
-description: ""
+description: "专注 Bun、Nuxt 4 与 Cloudflare 边缘架构的全栈工程师，持续构建企业级业务系统与边缘原生 Web 产品。"
 hero:
   links:
     - label: "联系我"
-      to: mailto:mou7s@icloud.com
+      to: "mailto:mou7s@icloud.com"
       color: "neutral"
       icon: "i-lucide-mail"
-      variant: "ghost"
+      variant: "solid"
 
 about:
-  title: "关于我"
+  title: "关于"
   description: |
-    作为拥有 3 年实践经验的全栈工程师，我负责网站的端到端开发与线上部署，全程护航项目从构思到最终上线。
-    我同时熟练掌握平面设计与视频剪辑，能有力提升品牌及内容的视觉表达，并负责企业网络运营，确保系统的安全稳定与网站的流畅访问。
-    通过将技术实现与视觉沟通有机结合，我致力于将复杂的业务需求转化为稳定、高品质且交互顺畅的数字产品。
+    我的工程实践围绕两条互补的主线展开：一条是面向真实生产与运营场景的企业级全栈业务系统，另一条是运行在 Cloudflare 边缘节点上的低延迟原生 Web 产品。
+
+    技术栈以 Bun、Nuxt 4、Vue 3 与 TypeScript 为核心——既能在单仓全栈架构中打通 MySQL、SQL Server、金蝶 K3Cloud 与企业微信协同，也能灵活组合 Durable Objects、D1、R2 与 Workers AI 构建流式与实时交互应用。在交付产品之外，我也在 GitHub 上持续沉淀数学、算法与 AI 协同工程规范的第一性原理笔记。
 
 skills:
-  title: "专业技能"
-  description: "在全栈开发、系统网络组网与数字化运维中沉淀的技术栈与工具链。"
+  title: "技术栈"
+  description: "日常工程中沉淀的前端交互、边缘运行时、企业集成与方法论工具链。"
   items:
-    - name: "全栈开发"
-      items: ["Nuxt", "Node.js", "Serverless & BaaS", "AI 辅助开发", "快速原型交付"]
-    - name: "网络与运维"
-      items: ["Linux / 服务部署", "ERP 定制与开发", "系统与硬件排障"]
-    - name: "设计与媒体"
-      items: ["平面设计 (Ps/Ai)", "视频拍摄剪辑"]
+    - name: "前端与交互体验"
+      items: ["Nuxt 4", "Vue 3.5", "TypeScript", "Nuxt UI v4", "Tailwind CSS 4", "motion-v", "Plotly 3D", "Canvas 2D"]
+    - name: "边缘与全栈运行时"
+      items: ["Bun", "Nitro", "Cloudflare Workers", "D1 / Drizzle", "Durable Objects", "R2 & KV", "Workers AI", "WebSocket"]
+    - name: "企业系统、协议与工程化"
+      items: ["MySQL", "SQL Server", "金蝶 K3Cloud", "RFC 5545 (ICS)", "AES-256-GCM", "Vitest / Workerd", "Agent 技能规范 (AGENTS.md)", "Linux & Nginx"]
 
-experience:
-  title: 工作经历
+foundations:
+  title: "开源工具与底层探索"
+  description: "在 GitHub 公开维护的工程效率工具与第一性原理学习记录。"
   items:
-    - position: "全栈工程师 @ "
-      date: "2026 - 至今"
-      company:
-        name: 通科半导体
-        logo: "mdi:factory"
-        url: "https://ctk.mou7s.com"
-        color: "#0066b3"  
-    - position: "全栈工程师 @ "
-      date: "2025 - 2026"
-      company:
-        name: 山泽新能源
-        logo: "mdi:battery-charging"
-        url: "https://shanzesz.com"
-        color: "#029bed"
-    - position: "IT 工程师 @ "
-      date: "2024 - 2025"
-      company:
-        name: 新埔纸业
-        logo: "mdi:paper-roll"
-        url: "https://baike.baidu.com/item/%E4%B8%9C%E8%8E%9E%E5%B8%82%E6%96%B0%E5%9F%94%E7%BA%B8%E4%B8%9A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/51511095"
-        color: "#28c95e"
-    - position: "网络管理员 @ "
-      date: "2023 - 2024"
-      company:
-        name: 福特汽车
-        logo: "mdi:car"
-        url: "https://www.ford.com.cn"
-        color: "#47a8e5"
+    - name: "数学自学路线图与日志"
+      repo: "Mou7s/math"
+      tag: "Self-Study"
+      summary: "从数系、微积分到线性代数的分叉式个人数学地图，用直觉和逐次日志检验理解深度。"
+      highlights:
+        - "已完成微积分 (V1–V6) 与线性代数 (VI1–VI5)"
+        - "坚持唯一过关判据：能自己说清为什么，才算过"
+      to: "https://github.com/Mou7s/math"
+    - name: "零依赖算法实践笔记"
+      repo: "Mou7s/algorithm"
+      tag: "JavaScript"
+      summary: "从零手写可独立运行的 JavaScript 算法样本，打印每一步状态并配合随机对拍校验。"
+      highlights:
+        - "覆盖链表指针、哈希索引、双指针与滑动窗口"
+        - "每类核心题型附带 1,000–2,000 组随机数据对拍"
+      to: "https://github.com/Mou7s/algorithm"
+    - name: "金蝶 ERP 运维与技能工作台"
+      repo: "Mou7s/kingdee"
+      tag: "CLI & Skills"
+      summary: "基于 Bun + TypeScript 的金蝶 K3Cloud WebAPI 运维脚本集与 8 个领域 Agent 技能工作流。"
+      highlights:
+        - "覆盖采购、生产、工序与库存单据只读检索"
+        - "强制默认 dry-run 预览，显式 --apply 才允许写入"
+      to: "https://github.com/Mou7s/kingdee"
 
 faq:
-  title: 常见问题解答
-  description: 快速了解关于我的常见问题。
+  title: "常见问题"
+  description: "关于技术选型、工程实践与合作方式的简要说明。"
   categories:
-    - title: 关于我是谁
+    - title: "技术与架构"
       questions:
-        - label: 用一句话概括你的定位？
+        - label: "主要聚焦在哪些类型的项目开发？"
           content: |
-            我是一名擅长用代码与视觉设计将创意落地、确保系统高可用和优质用户体验的全栈工程师。
-        - label: 你的职业背景是什么？
+            主要聚焦两类方向：一类是面向业务闭环的**企业数字化全栈系统**（如 ERP 集成、WMS 仓储、MES 质量看板与审批流程）；另一类是基于 **Cloudflare Workers** 生态的边缘原生产品（结合 D1、R2、KV、Durable Objects 与 Workers AI）。
+        - label: "为什么主力采用 Bun + Nuxt 4 + Cloudflare？"
           content: |
-            我的职业起步于企业 IT 运维与网络系统管理，这培养了我对底层基础设施稳定性与系统安全的严谨意识。此后我逐步转向全栈开发领域，把扎实的网络工程经验与前端美学设计相结合，从而能设计出既底层稳健又上层优雅、易用的数字产品。
-    - title: 工作与服务
+            统一的 TypeScript 全栈模型让前端界面、Nitro 服务端路由、Zod 校验与定时任务在同一套工程标准下高效演进；搭配 Cloudflare 边缘基础设施，可以用极低的运维成本获得全球低延迟分发能力。
+    - title: "工程与细节"
       questions:
-        - label: 你平时主要做哪类项目？
+        - label: "如何保障系统稳定性与 AI 辅助开发质量？"
           content: |
-            我专注于企业官网及后台管理系统的全栈研发与部署交付。在技术开发之外，我也能提供高水准的平面视觉设计与视频宣传片剪辑服务，从软硬件组网到网站上线提供全流程的支持。
-        - label: 你能提供哪些具体的服务？
+            在 `ctk-system`、`kingdee` 与 `meetnote` 等仓库中，我会通过显式的 `AGENTS.md` 工程契约、Zod 参数校验、Vitest / `workerd` 集成测试以及写操作 `dry-run` 门禁来约束代码与数据边界。
+        - label: "交互体验与前端细节也会一并打磨吗？"
           content: |
-            包括不限于：企业级全栈 Web 开发（Vue/React/Nuxt）、定制化 ERP 模块研发与系统运维支持、企业办公局域网组网与异地 VPN 组网方案设计、平面视觉设计（画册/海报/包装）与多媒体视频拍摄剪辑。
-    - title: 合作与联系
+            是的。从浅/暗双主题与 View Transitions 过渡动画，到 Plotly 3D 星图、Canvas 2D 实时棋盘与多语言日历视图，我更习惯从架构到界面细节一并打磨到位。
+    - title: "联系与合作"
       questions:
-        - label: 如何与你取得联系？
+        - label: "如何查看代码或进一步联系？"
           content: |
-            您可以通过我的 [GitHub 个人主页](https://github.com/mou7s) 了解我的开源项目和日常提交，也可以直接发送邮件到 [mou7s@icloud.com](mailto:mou7s@icloud.com)。非常期待与您的精彩合作！
+            欢迎浏览我的 [GitHub 仓库](https://github.com/Mou7s) 了解具体代码实现，或直接发送邮件至 [mou7s@icloud.com](mailto:mou7s@icloud.com) 与我沟通合作。

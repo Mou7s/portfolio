@@ -1,67 +1,67 @@
 # Mou7s Portfolio
 
-基于 Nuxt 4、Nuxt UI 与 Nuxt Content 构建的个人作品集网站。项目以内容驱动为主，使用 YAML 管理页面配置与作品数据，使用 Markdown 管理博客文章，包含首页、经历、项目、博客、演讲活动与 PPI 计算器页面。
+基于 Nuxt 4、Nuxt UI v4 与 Nuxt Content v3 构建的中英双语个人主页与作品集，部署于 Cloudflare Workers。内容完全由 YAML 驱动，集中展现企业数字化系统、边缘原生 Web 产品与开源基础实践。
 
 ## 功能概览
 
-- 内容驱动：页面数据集中存放在 `content/`，字段由 `content.config.ts` 约束。
-- 作品集展示：支持项目列表、工作经历、个人介绍、博客文章与演讲活动。
-- SEO 友好：页面使用 `useSeoMeta` 管理标题、描述与 Open Graph 信息，`/ppi` 页面包含 canonical 与结构化数据。
-- 响应式 UI：基于 Nuxt UI 和 Tailwind CSS，支持深浅色模式。
-- 页面动效：使用 `motion-v` 为列表与内容区块添加进入视口动画。
-- 静态资源管理：图片与图标资源放在 `public/`，可直接通过路径引用。
+- **内容驱动**：中英双语页面与项目数据存放在 `content/`，由 `content.config.ts` 进行 schema 校验。
+- **双语路由**：通过 `@nuxtjs/i18n`（`prefix_except_default`）提供英文 `/` 与简体中文 `/zh` 镜像体验，并在根路径根据偏好或浏览器语言自动分流。
+- **作品与开源矩阵**：集中展示开源项目截图（支持深浅色主题自动切换）、技术栈标签、线上访问与 GitHub 源码仓库链接，以及开源工具与底层学习记录。
+- **SEO 与安全**：页面使用 `useSeoMeta` 管理标题、描述与 Open Graph 信息；边缘中间件 `scanner-guard.ts` 在 SSR 前拦截常见漏洞扫描路径与扫描器 UA。
+- **动效与主题**：结合 `motion-v` 进场动画与 View Transitions API 圆形扩散切换深浅色模式。
 
 ## 技术栈
 
-- Nuxt 4
-- @nuxt/ui
-- @nuxt/content
-- nuxt-og-image
-- motion-v
-- TypeScript
-- bun
+- Nuxt 4 · Vue 3 · TypeScript
+- `@nuxt/ui` v4（Tailwind CSS v4）
+- `@nuxt/content` v3
+- `@nuxtjs/i18n`
+- `nuxt-og-image` v7 + `@takumi-rs/core`
+- `motion-v`
+- Bun + Cloudflare Workers（Wrangler）
 
 ## 页面与路由
 
-- `/` 首页，聚合 Hero、简介、经历、博客、评价与 FAQ
-- `/experience` 工作经历
-- `/projects` 项目展示
-- `/speaking` 演讲/活动页
-- `/ppi` PPI 计算器
+- `/` · `/zh`：首页（Hero、关于、技术栈矩阵、开源与底层探索、FAQ）
+- `/projects` · `/zh/projects`：项目展示（企业平台、边缘应用、交互作品）
 
 ## 目录结构
 
 ```text
 app/
-  app.vue              应用入口
-  app.config.ts        Nuxt UI 与全局配置
-  assets/css/          全局样式入口
-  components/          通用组件与页面模块
-  layouts/             布局
-  pages/               页面路由
-  utils/               工具函数
+  app.vue                 应用入口与基础 Meta
+  app.config.ts           Nuxt UI 主题色与全局配置
+  assets/css/             全局样式入口
+  components/             通用组件与首页区块（Hero/About/Skills/Foundations/FAQ）
+  composables/            导航组合式函数
+  layouts/                页面布局
+  middleware/             客户端路由规范化中间件
+  plugins/                语言自动重定向插件
+  pages/                  页面路由（index, projects）
 content/
-  en/                  英文内容
-  zh/                  中文内容
-  */*.yml              页面配置与结构化内容
-  */projects/*.yml     项目条目
-public/                静态资源
-content.config.ts      Nuxt Content collection schema
-nuxt.config.ts         Nuxt 配置
+  en/                     英文内容（index.yml, projects.yml, projects/*.yml）
+  zh/                     简体中文内容（结构镜像）
+public/
+  pics/                   项目浅/暗双色截图
+  robots.txt              爬虫规则
+server/
+  middleware/             scanner-guard 边缘探测拦截
+scripts/
+  bun-find-package-json.ts  Bun 对 nuxt-og-image v7 node:module API 的兼容垫片
+content.config.ts         Nuxt Content collection schema
+nuxt.config.ts            Nuxt 与 Cloudflare Workers 配置
 ```
 
 ## 本地开发
 
-使用 Bun 安装依赖并运行 Nuxt。OG Image 固定为 6.10.3：v7 使用当前 Bun 尚未支持的 `node:module.findPackageJSON`，暂不升级。TypeScript 使用与 vue-tsc 兼容的 6.x。
-
-使用 bun 安装依赖并启动开发服务器：
+使用 Bun 安装依赖并运行开发服务器：
 
 ```bash
 bun install
 bun run dev
 ```
 
-开发服务器默认由 Nuxt 输出本地访问地址。
+`bunfig.toml` 预加载 `scripts/bun-find-package-json.ts` 以兼容 `nuxt-og-image` v7 在 Bun 下调用的 `node:module.findPackageJSON`。
 
 ## 环境变量
 
@@ -77,59 +77,24 @@ cp .env.example .env
 NUXT_PUBLIC_SITE_URL=
 ```
 
-`NUXT_PUBLIC_SITE_URL` 用于生成站点相关的公开 URL，例如 OG Image 场景。
-
 ## 构建与检查
 
 ```bash
+bun run lint
+bun run typecheck
 bun run build
 bun run preview
-bun run typecheck
-bun run lint
 ```
-
-常用流程：
-
-- 开发时运行 `bun run dev`
-- 提交前运行 `bun run typecheck`
-- 发布前运行 `bun run build`，然后使用 `bun run preview` 本地预览产物
-
-## 内容维护
-
-### 上游模板同步
-
-2026-10-27 对照 `nuxt-ui-templates/portfolio` 的 `350bea0` 同步：错误页使用 UApp、移除重复的 Twitter 图片标签、Bun SQLite 连接器（按当前运行环境适配上游原生连接器改动）、顶层预渲染配置、兼容日期 2026-06-30，以及 ESLint/Tailwind 正确性检查。保留双语内容、PPI、Bun 包管理和 Cloudflare D1 适配。
-
-OG Image 保留在 6.10.3，以支持 Bun 运行。`find-up` 暂时固定为 7.0.0，以规避 8.0.0 从 `unicorn-magic` 错误入口导入 `toPath` 导致 Nuxt ESLint 模块加载失败。
-
-上游尾斜杠缓存键修复不适用于当前按语言生成的固定缓存键；博客布局、阅读时间、pnpm 和 GitHub Actions 配置不适用于当前项目。
-
-- 首页内容：`content/en/index.yml`、`content/zh/index.yml`
-- 经历页内容：`content/en/experience.yml`、`content/zh/experience.yml`
-- 项目页头部配置：`content/en/projects.yml`、`content/zh/projects.yml`
-- 项目条目：`content/en/projects/*.yml`、`content/zh/projects/*.yml`
-- 演讲/活动内容：`content/en/speaking.yml`、`content/zh/speaking.yml`
-
-新增内容前请确认字段满足 `content.config.ts` 中的 schema 定义。
-
-## 静态资源
-
-- Hero 图片：`public/hero/`
-- 项目与文章配图：`public/pics/`
-- favicon 与 Apple touch icon：`public/`
-- robots 配置：`public/robots.txt`
-
-内容文件中引用图片时，优先使用 `public/` 下的公开路径。
 
 ## 部署说明
 
-项目当前使用 Cloudflare Workers 部署，`nuxt.config.ts` 中的 Nitro preset 为 `cloudflare-module`。
+项目面向 Cloudflare Workers 部署，`nuxt.config.ts` 中生产 Nitro preset 为 `cloudflare-module`（开发模式通过 `$development` 覆写为 `node`），配置声明在 `wrangler.jsonc`。
 
-典型流程：
-
-1. `bun install`
-2. `bun run build`
-3. `bunx wrangler deploy`
+```bash
+bun install
+bun run build
+bunx wrangler deploy
+```
 
 本地预览 Worker 产物可运行：
 
@@ -140,5 +105,5 @@ bunx wrangler dev
 ## 协作说明
 
 - 开发前先阅读 `AGENTS.md`。
-- 提交前至少执行 `bun run typecheck`。
-- 请勿提交临时文件（例如 `#README.md#`、`.DS_Store`）。
+- 提交前执行 `bun run lint` 与 `bun run typecheck`。
+- 新增内容文件时需同步维护 `content/en/` 与 `content/zh/` 两份镜像文件。

@@ -7,7 +7,6 @@ export default defineAppConfig({
     },
     email: "mou7s@icloud.com",
     available: true,
-    workPreference: "remote",
   },
   ui: {
     colors: {

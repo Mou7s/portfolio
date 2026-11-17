@@ -20,11 +20,6 @@ const { data: projects } = await useAsyncData(`projects-${locale.value}`, () => 
 });
 
 const { global } = useAppConfig();
-const colorMode = useColorMode();
-
-// 深色模式优先用 imageDark，没有则回退到 image
-const projectImage = (project: { image: string; imageDark?: string }) =>
-  colorMode.value === "dark" && project.imageDark ? project.imageDark : project.image;
 
 useSeoMeta({
   title: page.value?.seo?.title || page.value?.title,
@@ -62,7 +57,7 @@ useSeoMeta({
         :key="project.title"
         :initial="{ opacity: 0, transform: 'translateY(10px)' }"
         :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
-        :transition="{ delay: 0.2 * index }"
+        :transition="{ duration: 0.35, delay: Math.min(index, 2) * 0.08 }"
         :in-view-options="{ once: true }"
       >
         <UPageCard
@@ -75,24 +70,62 @@ useSeoMeta({
             wrapper: 'max-sm:order-last',
           }"
         >
-          <template #leading/>
-          <template v-if="project.url" #footer>
-            <ULink
-              :to="project.url"
-              class="text-sm text-primary flex items-center"
-            >
-              {{ $t('projects.view_project') }}
-              <UIcon
-                name="i-lucide-arrow-right"
-                class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-              />
-            </ULink>
+          <template #leading />
+          <template #footer>
+            <div class="flex flex-col gap-3">
+              <div v-if="project.tags?.length" class="flex flex-wrap gap-1.5">
+                <UBadge
+                  v-for="tag in project.tags"
+                  :key="tag"
+                  variant="soft"
+                  color="neutral"
+                  size="sm"
+                  class="rounded-md font-normal"
+                >
+                  {{ tag }}
+                </UBadge>
+              </div>
+              <div v-if="project.url || project.repo" class="flex flex-wrap items-center gap-4">
+                <ULink
+                  v-if="project.url"
+                  :to="project.url"
+                  target="_blank"
+                  class="text-sm text-primary inline-flex items-center gap-1"
+                >
+                  {{ $t('projects.live_demo') }}
+                  <UIcon
+                    name="i-lucide-arrow-up-right"
+                    class="size-4 text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </ULink>
+                <ULink
+                  v-if="project.repo"
+                  :to="project.repo"
+                  target="_blank"
+                  class="text-sm text-muted hover:text-highlighted inline-flex items-center gap-1.5 transition-colors"
+                >
+                  <UIcon name="i-simple-icons-github" class="size-4" />
+                  {{ $t('projects.source_code') }}
+                </ULink>
+              </div>
+            </div>
           </template>
-          <div class="w-full overflow-hidden rounded-lg aspect-[16/9]">
-            <img
-              :src="projectImage(project)"
+          <div
+            v-if="project.image"
+            class="w-full overflow-hidden rounded-lg border border-default/60"
+          >
+            <UColorModeImage
+              v-if="project.imageDark"
+              :light="project.image"
+              :dark="project.imageDark"
               :alt="project.title"
-              class="size-full object-contain"
+              class="w-full h-auto block"
+            />
+            <img
+              v-else
+              :src="project.image"
+              :alt="project.title"
+              class="w-full h-auto block"
             >
           </div>
         </UPageCard>

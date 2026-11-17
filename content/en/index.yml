@@ -1,110 +1,85 @@
 seo:
-  title: "mou7s - Full-stack Engineer"
-  description: "Welcome to my portfolio! I'm mou7s, a full-stack engineer based in Dongguan. I specialize in creating user-centered digital experiences that are both beautiful and functional."
+  title: "mou7s — Full-Stack & Edge Engineer"
+  description: "Full-stack engineer building edge-native web apps on Cloudflare Workers and open-source business systems with Bun & Nuxt 4."
 title: "mou7s"
-description: ""
+description: "Full-stack engineer building edge-native web apps on Cloudflare Workers and production business systems with Bun & Nuxt 4."
 hero:
   links:
     - label: "Contact Me"
-      to: mailto:mou7s@icloud.com
+      to: "mailto:mou7s@icloud.com"
       color: "neutral"
       icon: "i-lucide-mail"
-      variant: "ghost"
+      variant: "solid"
 
 about:
-  title: "About Me"
+  title: "About"
   description: |
-    As a full-stack engineer with 3 years of experience, I manage end-to-end website development and deployment, supporting projects from concept to launch. 
-    I also handle graphic design and video editing to enhance brand and content presentation, while taking care of network operations to ensure system stability and smooth website performance. 
-    With a balanced approach to both technical implementation and visual communication, I turn requirements into reliable, user-friendly digital products with a consistent experience.
+    I build end-to-end web software across two complementary worlds: production business systems for manufacturing operations and lightweight, edge-native applications on Cloudflare Workers.
+
+    My stack centers on Bun, Nuxt 4, Vue 3, and TypeScript—whether connecting MySQL, SQL Server, Kingdee K3Cloud, and WeCom inside an open-source ERP monolith, or orchestrating Durable Objects, D1, R2, and Workers AI at the edge. Alongside shipping real products, I document first-principles self-study in mathematics, algorithms, and structured AI engineering workflows on GitHub.
 
 skills:
-  title: "Technical Skills"
-  description: "Core technologies, networking infrastructure, and creative tools in my daily workflow."
+  title: "Technical Stack"
+  description: "Core runtimes, edge primitives, enterprise integrations, and engineering craft."
   items:
-    - name: "Full-Stack Development"
-      items: ["Nuxt", "Node.js", "Serverless & BaaS", "AI-Assisted Development", "Rapid Prototyping"]
-    - name: "Networking & IT Ops"
-      items: ["Linux & Web Deployment", "ERP Customization & Development", "Systems & Hardware Troubleshooting"]
-    - name: "Design & Media"
-      items: ["Graphic Design (Ps/Ai)", "Video Editing"]
-experience:
-  title: Work Experience
-  items:
-    - position: "Full-stack Engineer at "
-      date: "2026 - Present"
-      company:
-        name: CTK-ELEC
-        logo: "mdi:factory"
-        url: "https://ctk.mou7s.com"
-        color: "#0066b3"  
-    - position: "Full-stack Engineer at"
-      date: "2025 - 2026"
-      company:
-        name: Shanze New Energy
-        logo: "mdi:battery-charging"
-        url: "https://shanzesz.com"
-        color: "#029bed"
-    - position: "IT Engineer at"
-      date: "2024 - 2025"
-      company:
-        name: Xinpu
-        logo: "mdi:paper-roll"
-        url: "https://baike.baidu.com/item/%E4%B8%9C%E8%8E%9E%E5%B8%82%E6%96%B0%E5%9F%94%E7%BA%B8%E4%B8%9A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/51511095"
-        color: "#28c95e"
-    - position: "Network Administrator at"
-      date: "2023 - 2024"
-      company:
-        name: Ford
-        logo: "mdi:car"
-        url: "https://www.ford.com.cn"
-        color: "#47a8e5"
+    - name: "Frontend & Interactive UI"
+      items: ["Nuxt 4", "Vue 3.5", "TypeScript", "Nuxt UI v4", "Tailwind CSS 4", "motion-v", "Plotly 3D", "Canvas 2D"]
+    - name: "Edge & Full-Stack Runtime"
+      items: ["Bun", "Nitro", "Cloudflare Workers", "D1 / Drizzle", "Durable Objects", "R2 & KV", "Workers AI", "WebSocket"]
+    - name: "Enterprise, Protocols & Craft"
+      items: ["MySQL", "SQL Server", "Kingdee K3Cloud", "RFC 5545 (ICS)", "AES-256-GCM", "Vitest / Workerd", "Agent Skills (AGENTS.md)", "Linux & Nginx"]
 
-# testimonials:
-#   - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
-#     author:
-#       name: "Sarah Chen"
-#       description: "Product Director at Bloom Finance"
-#       avatar:
-#         src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
-#         srcset: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
-#   - quote: "Working with Emma was the best decision we made for our startup. She didn't just deliver designs—she challenged our assumptions, conducted thorough user research, and created an experience that truly resonated with our audience. Her technical knowledge of front-end development meant the handoff to our engineering team was seamless."
-#     author:
-#       name: "Michael Rodriguez"
-#       description: "Co-founder of Wavelength Music"
-#       avatar:
-#         src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
-#         srcset: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
-#   - quote: "Emma stands out in her ability to translate complex sustainability data into intuitive interfaces. Her work on EcoTrack wasn't just visually stunning—it fundamentally changed how our users interact with environmental information. She approaches each problem with both creativity and analytical rigor, which is exactly what we needed."
-#     author:
-#       name: "Dr. Aisha Johnson"
-#       description: "Chief Innovation Officer at GreenTech Solutions"
-#       avatar:
-#         src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
-#         srcset: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
+foundations:
+  title: "Open Source & Foundations"
+  description: "Tooling and first-principles engineering logs maintained publicly on GitHub."
+  items:
+    - name: "Math Roadmap & Logs"
+      repo: "Mou7s/math"
+      tag: "Self-Study"
+      summary: "Branching self-taught mathematics map from foundations to calculus and linear algebra, logged step by step."
+      highlights:
+        - "Completed Calculus (V1–V6) & Linear Algebra (VI1–VI5)"
+        - "Strict mastery criterion: explain why before advancing"
+      to: "https://github.com/Mou7s/math"
+    - name: "Zero-Dependency Algorithms"
+      repo: "Mou7s/algorithm"
+      tag: "JavaScript"
+      summary: "Runnable algorithm drills written from scratch with zero dependencies and step-by-step trace output."
+      highlights:
+        - "Covers pointers, linked lists, hashing & sliding windows"
+        - "Verified via 1,000–2,000 randomized stress-test pairs"
+      to: "https://github.com/Mou7s/algorithm"
+    - name: "Kingdee ERP Ops Workbench"
+      repo: "Mou7s/kingdee"
+      tag: "CLI & Skills"
+      summary: "Bun + TypeScript WebAPI toolkit and domain Agent skills for safe Kingdee K3Cloud diagnostics and batch ops."
+      highlights:
+        - "Read-only lookup across procurement, production & sales"
+        - "Mandatory dry-run preview before --apply mutations"
+      to: "https://github.com/Mou7s/kingdee"
 
 faq:
-  title: Frequently Asked Questions
-  description: Answers to common questions about me.
+  title: "FAQ"
+  description: "Quick answers about how I build and collaborate."
   categories:
-    - title: Who I Am
+    - title: "Engineering"
       questions:
-        - label: What are you in one sentence?
+        - label: "What kind of software do you focus on?"
           content: |
-            I'm a full-stack engineer who turns ideas into reliable, user-friendly digital products with a consistent experience.
-        - label: What's your background?
+            I focus on full-stack TypeScript web applications—spanning internal enterprise platforms (ERP/WMS/MES integration, multi-stage approvals, reporting) and edge-native tools running on Cloudflare Workers, D1, R2, and Durable Objects.
+        - label: "Why Bun, Nuxt 4, and Cloudflare?"
           content: |
-            I started in IT and network administration, which gave me a strong foundation in infrastructure and system reliability. Over time, I transitioned into full-stack development, where I could combine my technical skills with my passion for design and user experience. This blend allows me to create solutions that are not only functional but also intuitive and visually appealing.
-    - title: Work & Services
+            A unified TypeScript codebase lets frontend interfaces, Nitro API routes, validation schemas, and background tasks move fast without extra glue layers. Pairing that with Cloudflare Workers keeps global latency and operational overhead low.
+    - title: "Craft & Approach"
       questions:
-        - label: What kind of projects do you work on?
+        - label: "How do you approach reliability and AI-assisted development?"
           content: |
-            I specialize in end-to-end website development and deployment, supporting projects from concept to launch. I also handle graphic design and video editing to enhance brand and content presentation, while taking care of network operations to ensure system stability and smooth website performance.
-        - label: What services do you offer?
+            Across repositories like `ctk-system`, `kingdee`, and `meetnote`, I pair explicit `AGENTS.md` engineering contracts with Zod validation, automated unit/workerd integration checks, and strict dry-run safeguards before any state mutation.
+        - label: "Do you also handle interactive UI and end-to-end polish?"
           content: |
-            I offer full-stack development services, including front-end and back-end development, as well as graphic design and video editing to enhance brand and content presentation. I also provide network operations support to ensure system stability and smooth website performance.
-    - title: Collaboration & Contact
+            Yes. From dual light/dark themes and View Transitions to Plotly 3D visualizations, Canvas 2D boards, and multi-locale calendars, I care about building interfaces that feel fast, coherent, and intuitive.
+    - title: "Collaboration"
       questions:
-        - label: How can I contact you?
+        - label: "How can we get in touch?"
           content: |
-            You can reach me via my [GitHub profile](https://github.com/mou7s), where you'll find my projects and contributions, or email me directly at [mou7s@icloud.com](mailto:mou7s@icloud.com). I'm always open to new opportunities and collaborations, so feel free to get in touch.
+            Explore my repositories on [GitHub](https://github.com/Mou7s) or reach out directly via [mou7s@icloud.com](mailto:mou7s@icloud.com).

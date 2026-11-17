@@ -1,0 +1,13 @@
+title: "ctk-system · 企业级数字化运营与生产管理平台"
+sort: 1
+description: "基于 Bun、Nuxt 4、Nitro 与 Nuxt UI v4 构建的 GPL-3.0 开源全栈业务系统，串联内外贸报价多级审批、低价预警、交期预警、客户逾期应收、扫码 WMS 仓储及 MES 工序直通率追踪。在单一仓库内整合显式 Nitro 接口、MySQL 持久化会话与写幂等控制、金蝶 K3Cloud WebAPI 对接、SQL Server 车间数据直连以及企业微信消息通知。"
+image: /pics/ctksys-light.png
+imageDark: /pics/ctksys-dark.png
+repo: "https://github.com/Mou7s/ctk-system"
+tags:
+  - "Bun / Nitro"
+  - "Nuxt 4"
+  - "金蝶 K3Cloud"
+  - "MySQL & SQL Server"
+  - "WMS / MES"
+  - "GPL-3.0"

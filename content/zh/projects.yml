@@ -1,6 +1,9 @@
-title: 个人项目
-description: 这里展示了我的开发项目、IT 基础设施集成以及创意作品。
+seo:
+  title: "项目 | mou7s"
+  description: "mou7s 公开的开源企业全栈平台、Cloudflare 边缘计算应用、三维数据可视化与实时联机游戏作品。"
+title: "构建系统与边缘产品"
+description: "涵盖企业级全栈业务平台、Cloudflare Workers 边缘原生应用、数据可视化与实时联机作品，全部项目已在 GitHub 开源。"
 links:
   - label: "联系我"
     icon: "i-lucide-mail"
-    color: "primary"
+    color: "neutral"

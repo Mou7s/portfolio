@@ -1,5 +1,8 @@
-title: Designing Interfaces, Building Experiences.
-description: My focus is on bringing a product from concept to launch, covering front-end experience, back-end interfaces, databases, and deployment and maintenance.
+seo:
+  title: "Projects | mou7s"
+  description: "Open-source enterprise platforms, Cloudflare edge applications, 3D data visualization, and real-time WebSocket games by mou7s."
+title: "Building Systems & Edge Products."
+description: "From full-stack enterprise platforms with ERP integration to Cloudflare Workers edge apps—every project below is open source on GitHub."
 links:
   - label: "Email me"
     icon: "i-lucide-mail"

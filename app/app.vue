@@ -21,7 +21,7 @@ useHead({
 // 配置 SEO 与社交分享卡片
 useSeoMeta({
   titleTemplate: "%s",
-  ogImage: "https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png",
+  ogSiteName: "mou7s",
   twitterCard: "summary_large_image",
 });
 
