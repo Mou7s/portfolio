@@ -3,6 +3,7 @@ sort: 1
 description: "An open-source (GPL-3.0) full-stack enterprise platform built with Bun, Nuxt 4, Nitro, and Nuxt UI v4. Unifies domestic and export quotation approvals, price-history warnings, delivery alerts, overdue receivables, barcode WMS, and MES process yield tracking in one monolith. Integrates Kingdee K3Cloud WebAPI, SQL Server manufacturing data, WeCom notifications, and MySQL-backed persistent sessions, locks, and idempotency keys."
 image: /pics/ctksys-light.png
 imageDark: /pics/ctksys-dark.png
+url: "https://wx.ctk-elec.com:999/login?demo=1"
 repo: "https://github.com/Mou7s/ctk-system"
 tags:
   - "Bun / Nitro"

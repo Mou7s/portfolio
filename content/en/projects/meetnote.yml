@@ -2,6 +2,7 @@ title: "MeetNote · Zero-Login Edge Meeting Assistant"
 sort: 2
 description: "A real-time meeting transcription and AI analysis workspace built with Nuxt 4 and Cloudflare Workers—no sign-up or login required. Browser-isolated workspaces store user-supplied Bailian and DeepSeek keys in D1 with AES-256-GCM encryption bound to workspace IDs. Each meeting runs on a dedicated SQLite Durable Object, archives chunked 16 kHz PCM audio into private R2 for HTTP Range WAV playback, and streams AI summaries on demand."
 image: /pics/meetnote-light.png
+imageDark: /pics/meetnote-dark.png
 url: "https://meetnote.mou7s.workers.dev"
 repo: "https://github.com/Mou7s/meetnote"
 tags:

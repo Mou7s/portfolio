@@ -2,6 +2,7 @@ title: "MeetNote · 无登录边缘实时会议助手"
 sort: 2
 description: "基于 Nuxt 4 与 Cloudflare Workers 构建的实时会议转写与 AI 总结工作台，打开即用、免注册登录。通过 HttpOnly Cookie 隔离浏览器工作空间，使用绑定工作空间 ID 的 AES-256-GCM 将个人百炼与 DeepSeek 密钥加密存储在 D1。每场会议由独立的 SQLite Durable Object 驱动，音频分片归档至私有 R2 支持 Range WAV 回放，并接入流式转写与全文分析。"
 image: /pics/meetnote-light.png
+imageDark: /pics/meetnote-dark.png
 url: "https://meetnote.mou7s.workers.dev"
 repo: "https://github.com/Mou7s/meetnote"
 tags:
