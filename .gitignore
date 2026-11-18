@@ -32,3 +32,6 @@ tmp/
 
 # Local editor
 .commandcode/
+
+# Resume files
+resume_pdf/
