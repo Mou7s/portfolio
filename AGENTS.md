@@ -100,7 +100,10 @@ bun run typecheck # Nuxt + TypeScript 类型检查
 - **Nitro preset**: `cloudflare-module`，部署到 Cloudflare Workers（`$development` 下覆写为 `node` 以确保开发态内容路由正常）。
 - **预渲染路由**: `/`、`/zh`（启用 `crawlLinks` 爬取 `/projects` 等关联路由）。
 - **OG 图片**: `zeroRuntime: true`，减少构建产物体积；渲染器使用 takumi（`@takumi-rs/core`）。
-- **Bun 兼容垫片**: `bunfig.toml` 顶层 `preload` 注入 `scripts/bun-find-package-json.ts`。nuxt-og-image v7 在 setup 阶段调用 `node:module` 的 `findPackageJSON()`（Node 22.14+ 新增 API），而 Bun 尚未实现该 API；缺少垫片时 `bun install` / `bun dev` / `bun run build` 会在启动阶段报 `findPackageJSON is not a function`。Bun 实现该 API 后可删除垫片。
+- **Bun 兼容垫片**: `bunfig.toml` 顶层 `preload` 注入两个幂等垫片：
+  - `scripts/bun-find-package-json.ts`：补齐 Bun 尚未实现的 `node:module` `findPackageJSON()`（供 `nuxt-og-image` v7 初始化使用）。
+  - `scripts/bun-prepare-stack-trace.ts`：为 Bun 原生 `Error.prepareStackTrace` 包裹类型守卫，避免 `jiti`（Babel）包装 `Error.prepareStackTrace` 后，与 `vite` 内联的 `follow-redirects` 等通过 `CustomError.prototype = new Error()` + `Error.captureStackTrace(this, ...)` 构造自定义错误对象的库冲突，导致报 `First argument must be an Error object`。
+  Bun 上游原生兼容后可删除对应垫片。
 - **DevTools**: 默认启用（快捷键 Shift + Option + D）。
 
 ### 新增关键页面时

@@ -1,4 +1,7 @@
-preload = ["./scripts/bun-find-package-json.ts"]
+preload = [
+  "./scripts/bun-find-package-json.ts",
+  "./scripts/bun-prepare-stack-trace.ts",
+]
 
 [run]
 bun = true
